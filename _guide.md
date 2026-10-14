@@ -21,7 +21,7 @@ _guide.md        — this file
 _records/        — project, repository, and namespace records
 knowledge/       — repository-level knowledge documentation
 cli/             — CLI packages; each owns its _roadmap/ and _backlog/
-cli/whiteboard   — `@art-boards/whiteboard`, plus _roadmap/ and _backlog/
+cli/whiteboard   — `@art-boards/whiteboard-cli`, plus _roadmap/ and _backlog/
 ```
 
 ## Records Management

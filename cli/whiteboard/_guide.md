@@ -1,6 +1,6 @@
 # Guide: Art Whiteboard CLI
 
-The Art Whiteboard CLI package (`@art-boards/whiteboard`, binary `art-boards-whiteboard`) coordinates agent sessions around a whiteboard. It monitors whiteboard participant sessions and dispatches "next turn" prompts.
+The Art Whiteboard CLI package (`@art-boards/whiteboard-cli`, binary `art-boards-whiteboard`) coordinates agent sessions around a whiteboard. It monitors whiteboard participant sessions and dispatches "next turn" prompts.
 
 ## Recommended Reading
 
