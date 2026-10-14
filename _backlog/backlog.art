@@ -1,0 +1,9 @@
+# Module
+
+## Backlog: Art Boards
+
+**Purpose:** Hold the planning artefacts of Project: Art Boards.
+
+**Description:** Filesystem with 0-archive, 3-now, 4-next, and 6-plan directories.
+
+**Path:** `_backlog/`
