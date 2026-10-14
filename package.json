@@ -1,7 +1,7 @@
 {
   "name": "noodlestan/art-boards",
   "version": "0.0.1",
-  "description": "Coordinate agent sessions around a whiteboard: the Art Whiteboard CLI and future whiteboard tooling.",
+  "description": "onorepo containing the Art Boards roadmap and backlogs,knowledge, and CLI source code.",
   "author": "Noodlestan",
   "license": "MIT",
   "private": true,
@@ -12,12 +12,12 @@
   "engines": {
     "node": ">=22"
   },
+  "prettier": "@noodlestan/prettier-config",
   "scripts": {
     "lint": "prettier . -c",
     "lint:fix": "prettier . -c --write"
   },
   "devDependencies": {
     "@noodlestan/prettier-config": "0.1.0"
-  },
-  "prettier": "@noodlestan/prettier-config"
+  }
 }

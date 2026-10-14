@@ -1,8 +1,8 @@
 # Guide: Art Boards
 
-> Coordinate agent sessions around a whiteboard.
+> Host and manage the Art Boards packages and tools, and their knowledge and planning artefacts.
 
-Monorepo hosting the Art Boards project. Hosts the Art Whiteboard CLI under `cli/`, which owns its own roadmap, backlog, and knowledge documentation.
+Monorepo containing the Art Boards roadmap and backlogs, knowledge, and CLI source code.e documentation.
 
 Uses Workflow: Planning Work with one backlog per CLI package, coordinating with Workflow: Roadmapping from one roadmap per CLI package.
 
@@ -36,8 +36,8 @@ Records are co-located with the resources they describe in `_records/` directori
 
 This repository maintains knowledge references at:
 
-- `knowledge/index.md` — Repository-level knowledge index.
-- `cli/whiteboard/knowledge/index.md` — Art Whiteboard CLI knowledge index.
+- `knowledge/index.md` — Repository-level knowledge.
+- `cli/whiteboard/knowledge/index.md` — Art Whiteboard CLI.
 
 ## Conventions
 
@@ -47,9 +47,8 @@ Read the convention indexes listed below and follow them when planning and execu
 
 The following conventions apply to all packages in this repository:
 
-::READ `./node_modules/@noodlestan/conventions-typescript/art/index.md` — TypeScript conventions.
-
-::READ `./node_modules/@noodlestan/conventions-unit-tests/art/index.md` — Unit Test conventions.
+- `./node_modules/@noodlestan/conventions-typescript/art/index.md` — TypeScript conventions.
+- `./node_modules/@noodlestan/conventions-unit-tests/art/index.md` — Unit Test conventions.
 
 In case of ambiguity or conflict applying conventions, follow links from the convention indexes to extended convention files and read the examples there for what to follow and what to avoid.
 
@@ -67,17 +66,25 @@ Projects in this repository use the following workflows:
 
 ### Roadmapping
 
-Roadmaps live with the CLI they describe, one per package:
+This repository maintains one repository level roadmap:
 
-- `cli/whiteboard/_roadmap/` — subdirectories such as `3-now`, `4-next`, `6-plan`, `8-discovery`, and `9-inbox`.
-- The short-term roadmapping focus is captured in `cli/whiteboard/_roadmap/_parking-lot.md`.
-- The project-level roadmap at `_roadmap/` tracks milestones that span the repository.
+- The roadmap lives at `_roadmap/` with subdirectories such as `/3-now` and `/4-next/`.
+- The short-term roadmapping focus is captured in `_roadmap/_parking-lot.md`.
+
+This repository hosts also roadmaps for:
+
+- `cli/board/`
 
 ### Planning Work
 
-- The project backlog lives at `_backlog/` with subdirectories such as `3-now` and `4-next`.
+This repository maintains one repository level backlog:
+
+- The backlog lives at `_backlog/` with subdirectories such as `/3-now` and `/4-next/`.
 - The short-term focus is captured in `_backlog/_parking-lot.md`.
-- Each CLI package owns a backlog at `cli/{package}/_backlog/`.
+
+This repository hosts also backlogs for:
+
+- `cli/board/`
 
 ## Operating Instructions
 

@@ -2,9 +2,9 @@
 
 ## Repository: Art Boards
 
-**Purpose:** Host and manage the Art Boards project: the Art Whiteboard CLI, its planning artefacts, and future whiteboard tooling.
+**Purpose:** Host and manage the Art Boards packages and tools, and their knowledge and planning artefacts.
 
-**Description:** Monorepo containing the Art Boards roadmap, the Art Whiteboard CLI package, and their backlogs and knowledge documentation.
+**Description:** Monorepo containing the Art Boards roadmap and backlogs, knowledge, and CLI source code.
 
 **Owner:** Project: Art Boards
 

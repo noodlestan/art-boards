@@ -1,6 +1,10 @@
 # Architect Introduction: `ART_BOARDS`
 
-**Participant:** `ART_BOARDS` · **Status:** READY · **Board:** [`whiteboard-art-boards-inception.md`](./whiteboard-art-boards-inception.md)
+**Participant:** `ART_BOARDS`
+
+**Status:** `READY`
+
+**Board:** [`Whiteboard: Art Boards Inception`](./whiteboard.md)
 
 ## Purpose
 
