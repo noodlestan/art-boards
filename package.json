@@ -1,0 +1,23 @@
+{
+  "name": "noodlestan/art-boards",
+  "version": "0.0.1",
+  "description": "Coordinate agent sessions around a whiteboard: the Art Whiteboard CLI and future whiteboard tooling.",
+  "author": "Noodlestan",
+  "license": "MIT",
+  "private": true,
+  "packageManager": "npm@10.2.3",
+  "workspaces": [
+    "cli/**"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "lint": "prettier . -c",
+    "lint:fix": "prettier . -c --write"
+  },
+  "devDependencies": {
+    "@noodlestan/prettier-config": "0.1.0"
+  },
+  "prettier": "@noodlestan/prettier-config"
+}
