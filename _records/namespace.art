@@ -1,0 +1,17 @@
+# Module
+
+## Namespace: Art Boards
+
+**Purpose:** Publish whiteboard session coordination packages under the `@art-boards` scope.
+
+**Description:** Grouping of the Art Boards publishable packages and their scaffolding.
+
+**Owner:** Project: Art Boards
+
+**Author:** Noodlestan Collective
+
+**Scaffolders:**
+
+- None.
+
+**License:** License: Noodlestan 2026 MIT

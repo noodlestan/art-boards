@@ -1,0 +1,49 @@
+# Module
+
+## Repository: Art Boards
+
+**Purpose:** Host and manage the Art Boards project: the Art Whiteboard CLI, its planning artefacts, and future whiteboard tooling.
+
+**Description:** Monorepo containing the Art Boards roadmap, the Art Whiteboard CLI package, and their backlogs and knowledge documentation.
+
+**Owner:** Project: Art Boards
+
+**Author:** Noodlestan Collective
+
+**Remote:** `git@github.com:noodlestan/art-boards.git`
+
+**Consumers:** TBD
+
+**Private:** `false`
+
+**Workspaces:** `cli/**`
+
+**Language:** TypeScript
+
+**Engines:**
+
+- Node: `>= 22`
+
+**PackageManager:** `npm@10.2.3`
+
+**PackageFile:** package.json
+
+**Dependencies:**
+
+- Runtime:
+  - TBD
+- Dev:
+  - TBD
+
+**Scripts:**
+
+- Package Script Set: Root Lifecycle
+
+**Scaffolders:**
+
+- Scaffolder Skeleton: Project Skeleton
+- Scaffolder Files: Project README
+- Scaffolder Files: Project Package Json
+- Scaffolder Files: Project Lefthook
+
+**License:** License: Noodlestan 2026 MIT

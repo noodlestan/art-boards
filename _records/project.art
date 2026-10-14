@@ -1,0 +1,26 @@
+# Module
+
+## Project: Art Boards
+
+**Purpose:** Coordinate agent sessions around a whiteboard.
+
+**Description:** Project hosting the Art Whiteboard CLI and future whiteboard tooling, with its roadmap, backlog, and knowledge documentation.
+
+**Owner:** Project: Artificials
+
+**Author:** Noodlestan Collective
+
+**Repository:** Repository: Art Boards
+
+**Resources:**
+
+- Package: Art Whiteboard CLI (PLANNED)
+
+**Private:** `false`
+
+**Management:**
+
+- Uses Workflow: Roadmapping. Roadmap at `_roadmap`.
+- Uses Workflow: Planning Work. Backlog at `_backlog`.
+
+**License:** License: Noodlestan 2026 MIT
