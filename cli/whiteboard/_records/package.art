@@ -1,0 +1,59 @@
+# Module
+
+## Package: Art Whiteboard CLI
+
+**Purpose:** Coordinate agent sessions around a whiteboard.
+
+**Description:** CLI package that monitors whiteboard participant sessions and dispatches "next turn" prompts; contains the command surface, session monitoring, and prompt dispatch modules.
+
+**Owner:** Project: Art Boards
+
+**Namespace:** Namespace: Art Boards
+
+**Author:** Noodlestan Collective
+
+**Path:** `cli/whiteboard`
+
+**Canonical Name:** `@art-boards/whiteboard`
+
+**Published:** `true`
+
+**Private:** `false`
+
+**Deployment:** NPM Package Deployment: Art Whiteboard CLI
+
+**Files:**
+
+- `dist`
+- `LICENSE-MIT`
+- `README.md`
+
+**Language:** TypeScript
+
+**Bin:**
+
+- `art-boards-whiteboard`: `./dist/index.mjs`
+
+**Engines:**
+
+- Node: `>= 22`
+
+**PackageManager:** `npm@10.2.3`
+
+**PackageFile:** `package.json`
+
+**Dependencies:**
+
+- Runtime:
+  - TBD — Art Lib CLI infrastructure packages (commander wrapper, config, logger, operations); PLANNED with the Art Lib plan.
+  - TBD — Opencode libraries for talking to Opencode sessions (candidate: `@opencode-ai/sdk`; to be confirmed).
+
+- Dev:
+  - Package Dependency Set: CLI Development
+
+**Scaffolders:**
+
+- Scaffolder Skeleton: CLI Package
+- Scaffolder Skeleton: Package Common
+
+**License:** License: Noodlestan 2026 MIT

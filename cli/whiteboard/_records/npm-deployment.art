@@ -1,0 +1,17 @@
+# Module
+
+## NPM Package Deployment: Art Whiteboard CLI
+
+**Owner:** Package: Art Whiteboard CLI
+
+**Status:** `PLANNED`
+
+**Build:** Deployment Build: NPM Command
+
+**Deploy:** Deployment Command: NPM Package CLI
+
+**Canonical Name:** `@art-boards/whiteboard`
+
+**Registry:** `https://registry.npmjs.org`
+
+**Access:** `public`
