@@ -8,6 +8,12 @@
 
 **Description:** Shared whiteboard for the Art Boards inception: research context, roadmap milestones (`one`, `next`, `3000`), and the message-board collaboration flow. Architects draft their planning artefacts in their repositories and present them for review and alignment before those can be delegated. No development or direct changes to codebase allowed.
 
+## Mandatory Reading
+
+::READ `_records/project.art` - This project's record: purpose and description.
+
+::READ `cli/whiteboard/_records/package.art` - The Whiteboard CLI package record: purpose and description.
+
 ---
 
 ## Facilitation
@@ -23,16 +29,19 @@
 **Tasks:**
 
 - [ ] All approve this goal — or interject with a pending request that should come first.
+  - 👍 from `MANAGEMENT`
 - [ ] Every invited participant introduces themselves in their attachment.
 - [ ] Every participant status updated to `READY` by facilitator or whiteboard owner.
 - [ ] The whiteboard agrees on its structure (`Research`, `Roadmapping`) and working agreements.
+  - 👍 from `MANAGEMENT`
 - [ ] The message board flow is live: `ART_DOMAINS` lands the messages resources; all messages travel via the message board and are purged once actioned.
 - [ ] All active participants introduced and `READY`; whiteboard goal and structure agreed. _→ archive this goal here._
 
 **Whiteboard Structure:**
 
+- h2. Mandatory Reading
 - h2. Facilitation
-- h2. Participants with one section per Participant
+- h2. Participants (one section per Participant)
 - h2. Attachments
 - h2. Parking lot
 - h2. Message Board
@@ -65,7 +74,7 @@
 
 **Sentiment:**
 
-- `MANAGEMENT` - 😇 whishful thinking; hoping this works 😰 afraid of verbose agents.
+- `MANAGEMENT` - 😇 wishful thinking; hoping this works 😰 afraid of verbose agents.
 - `ART_BOARDS` - 🎯 board created; my intro authored; invitations pending; first goal drafted for approval.
 - `ART_DOMAINS` - TO BE AUTHORED BY PARTICIPANT.
 - `ART_LIB` - TO BE AUTHORED BY PARTICIPANT.
@@ -85,7 +94,12 @@
 
 **Goals:** Ensure plans cover all expected use cases.
 
-**Deliverables:** None.
+**Expectation:**
+
+- `ART_BOARDS` – drive this whiteboard; populate the roadmap; define the next plan; identify dependencies; validate plans by others to unblock your path.
+- `ART_DOMAINS` – contribute long-term ideas and feasible use cases around your domain models and interactions.
+- `ART_LIB` – deliver plans to unblock whiteboards; prefer solutions aligned with your own long-term roadmap to bespoke one-offs; re-align your roadmap with the use cases surfaced here.
+- `ART_JS` – deliver plans to unblock whiteboards; prefer solutions aligned with your own long-term roadmap to bespoke one-offs; re-align your roadmap with the use cases surfaced here.
 
 ### `ART_BOARDS`
 
@@ -108,8 +122,6 @@
 ### `ART_DOMAINS`
 
 **Status:** `INTRODUCING`
-
-**Goals:** Deliver the messages resources this board depends on: the `messaging` skill — commands: write a message, read incoming messages; routines: write-message and read-individual-message.
 
 **Attachment:** `./architect__art-domains.md`
 
@@ -176,19 +188,33 @@ Research context for the Art Boards project: opencode session integration, white
 
 The Art Boards `_roadmap` milestones composed on this board.
 
+Describe ideas that maximise leverage of the existing ecosystem or push it forward with new high-impact capabilities.
+
 ### Milestone: Art Boards One
 
 **File:** `_roadmap/6-plan/milestone-art-boards-one/milestone.md`
 
+#### Ideas
+
+Essentials, first steps, de-risiking, validation.
+
 ### Milestone: Art Boards Next
 
 **File:** `_roadmap/8-discovery/milestone-art-boards-next/milestone.md`
+
+#### Ideas
+
+Feasible ideas only.
 
 ### Milestone Art Boards 3000
 
 The brightest imagined long-distance future; it stays in `9-inbox` forever and incubates other milestones.
 
 **File:** `_roadmap/9-inbox/milestone-art-boards-3000/milestone.md`
+
+#### Ideas
+
+Anything goes.
 
 - _Milestone drafts land here for review before they are written to `$ART_BOARDS/cli/whiteboard/_roadmap/`._
 
