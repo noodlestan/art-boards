@@ -23,7 +23,7 @@
 **Tasks:**
 
 - [ ] All approve this goal — or interject with a pending request that should come first.
-- [ ] Every invited participant introduces themselves in their attachment;
+- [ ] Every invited participant introduces themselves in their attachment.
 - [ ] Every participant status updated to `READY` by facilitator or whiteboard owner.
 - [ ] The whiteboard agrees on its structure (`Research`, `Roadmapping`) and working agreements.
 - [ ] The message board flow is live: `ART_DOMAINS` lands the messages resources; all messages travel via the message board and are purged once actioned.
@@ -32,7 +32,7 @@
 **Whiteboard Structure:**
 
 - h2. Facilitation
-- h2. Participants with one section per Participant,
+- h2. Participants with one section per Participant
 - h2. Attachments
 - h2. Parking lot
 - h2. Message Board
@@ -47,12 +47,12 @@
 - Participants MUST NOT explore each other's artefacts without prior agreement from owners.
 - Participants MUST NOT modify each other's artefacts without prior agreement from owners.
 - Participants prefer to add questions to the Pending/Questions rather than making assumptions about the state of other projects.
-- Only the participant named in `turn` writes to this file;
+- Only the participant named in `turn` writes to this file.
 - Fair turn-taking: anyone idle for the preceding `N × 2` turns takes the next turn.
-- List of `changes` is one bullet per turn, at most 120 characters.
+- The list of `changes` is one bullet per turn, at most 120 characters.
 - Prefer one short direct sentence to long prose paragraphs.
 - Prefer naming resources to abbreviations — no "Package X", "Plan A"; name the actual resource.
-- Parking-lot items are at most 120 characters, hold current state only, and are pruned aggressively by their author or the board owner.
+- Parking-lot items are at most 300 characters, hold current state only, and are pruned aggressively by their author or the board owner.
 - Cross-participant messages travel via the `## Message Board` section — never the parking lot — and are purged as soon as read and actioned; the receiver records any follow-up work in their own artefacts (example: a task in a local parking lot).
 - Every introduction attachment carries two custom fields: `Planning` (paths to the participant's Art-Boards-relevant planning artefacts) and `Deliverables` (what this participant delivers for this project).
 - Goals follow the goal shape and require approval from all active participants before work starts.
@@ -65,6 +65,7 @@
 
 **Sentiment:**
 
+- `MANAGEMENT` - 😇 whishful thinking; hoping this works 😰 afraid of verbose agents.
 - `ART_BOARDS` - 🎯 board created; my intro authored; invitations pending; first goal drafted for approval.
 - `ART_DOMAINS` - TO BE AUTHORED BY PARTICIPANT.
 - `ART_LIB` - TO BE AUTHORED BY PARTICIPANT.
@@ -74,13 +75,29 @@
 
 ## Participants
 
+### `MANAGEMENT`
+
+**Status:** `READY`
+
+**Attachment:** [`./architect__management.md`](./architect__management.md)
+
+**Planning:** `$MANAGEMENT/_roadmap/3-now/milestone-hello-world/milestone.md`.
+
+**Goals:** Ensure plans cover all expected use cases.
+
+**Deliverables:** None.
+
 ### `ART_BOARDS`
 
-**Status:** READY
+**Status:** `READY`
 
 **Goals:** Own the Art Boards inception: draft and agree `_roadmap` milestones `one`, `next`, and `3000`; review every plan before delegation; keep the message board as the only messaging channel.
 
-**Expectations:** `ART_DOMAINS` lands the messages domain and skill ASAP — usable before publication; producers produce plans for the libs and tools this roadmap identifies as needed for building the whiteboard first slice.
+**Expectations:**
+
+- `ART_DOMAINS` – Lands the messages domain and skill ASAP — usable before publication.
+- `ART_LIB` – Draft plans for the libs and tools this roadmap (config, logger, operations, prompts, ui, agent bridges, websocket abstraction, and others surfaced by the roadmap).
+- `ART_JS` – Draft plans for libs and tools to read, modify, and write records and resources. Enable composing deterministic read/parse/validate/transform/write operations over the whiteboard document and all its nested records.
 
 **Attachment:** `./architect__art-boards.md`
 
@@ -90,25 +107,21 @@
 
 ### `ART_DOMAINS`
 
-**Status:** INTRODUCING
+**Status:** `INTRODUCING`
 
-**Goals:** Deliver the messages resources this board depends on: the `messaging` skill with commands: write a message, read incoming messages, and the write-message and read-individual-message routines.
+**Goals:** Deliver the messages resources this board depends on: the `messaging` skill — commands: write a message, read incoming messages; routines: write-message and read-individual-message.
 
 **Attachment:** `./architect__art-domains.md`
 
 ### `ART_LIB`
 
-**Status:** INTRODUCING
-
-**Goals:** Producer of supporting libs and tools needed by `@art-boards/whiteboard-cli`. Planned: prompts and ui. Candidates to be identified together: agent bridges, websocket abstraction, and others surfaced by the roadmap.
+**Status:** `INTRODUCING`
 
 **Attachment:** `./architect__art-lib.md`
 
 ### `ART_JS`
 
-**Status:** INTRODUCING
-
-**Goals:** Producer of libs and tools to read, modify, and write records and resources. Enable composing deterministic read/parse/validate/transform/write operations over the whiteboard document and all its nested records.
+**Status:** `INTRODUCING`
 
 **Attachment:** `./architect__art-js.md`
 
@@ -116,7 +129,8 @@
 
 ## Attachments
 
-- `./architect__art-boards.md` — introducing `ART_BOARDS`.
+- `./architect__management.md`.
+- `./architect__art-boards.md`.
 - `./architect__art-domains.md` — introducing `ART_DOMAINS` (authored on join).
 - `./architect__art-lib.md` — introducing `ART_LIB` (authored on join).
 - `./architect__art-js.md` — introducing `ART_JS` (authored on join).
@@ -154,13 +168,27 @@ The message board is this board's only messaging channel: short messages are wri
 
 Research context for the Art Boards project: opencode session integration, whiteboard domain consumption, messages domain design, and producer landscapes (prompts, ui, cli <> agent bridges, socket abstraction).
 
-- _Participants add research findings here as they converge; one bullet per finding, linking its source._
+- _Participants add research findings here as they converge; one bullet per finding, linking its source. As content grows, findings are organised in h3. sections, by topic._
 
 ---
 
 ## Roadmapping
 
-The Art Boards `_roadmap` milestones composed on this board: `3-now/milestone-one`, `4-next/milestone-next`, and `9-inbox/milestone-3000` — the brightest imagined long-distance future; it stays in `9-inbox` forever.
+The Art Boards `_roadmap` milestones composed on this board.
+
+### Milestone: Art Boards One
+
+**File:** `_roadmap/6-plan/milestone-art-boards-one/milestone.md`
+
+### Milestone: Art Boards Next
+
+**File:** `_roadmap/8-discovery/milestone-art-boards-next/milestone.md`
+
+### Milestone Art Boards 3000
+
+The brightest imagined long-distance future; it stays in `9-inbox` forever and incubates other milestones.
+
+**File:** `_roadmap/9-inbox/milestone-art-boards-3000/milestone.md`
 
 - _Milestone drafts land here for review before they are written to `$ART_BOARDS/cli/whiteboard/_roadmap/`._
 
@@ -168,6 +196,7 @@ The Art Boards `_roadmap` milestones composed on this board: `3-now/milestone-on
 
 ## Changes
 
+- `MANAGEMENT` - 2026-10-15 - Joined. Whiteboard review.
 - `ART_BOARDS` - 2026-10-14 - Whiteboard created; intro authored; invitations pending.
 
 ---
@@ -188,17 +217,16 @@ The Art Boards `_roadmap` milestones composed on this board: `3-now/milestone-on
 - Stage workspace files only — the board and its attachments. Leave your own turn unstaged for the next participant to review, or let the facilitator commit.
 - Update your own `sentiment` line only.
 - Append; never rewrite other participants' content.
-- Add exactly one succinct `changes` bullet per turn (at most 120 characters).
+- Add exactly one succinct `changes` bullet per turn.
 - Keep a rolling `changes` window, retaining at least the last `N × 2` entries — where `N` is the number of active participants. Read the whiteboard's own `Participant Statuses` to infer which states are active: a status whose description still allows taking turns is active; one whose description says the participant has left the session or is not yet available is not.
 - Update `turn`, preserving fair turn-taking: a participant who has not had a turn in the preceding `N × 2` turns (`N` = active participants — those whose status description means available to take turns. Example: `READY`) must receive the next turn.
-- Standing instruction: _apply all updates to your content in order to maintain the whiteboard validated, and free of redundancies, duplications and obsolete historical facts — and provide feedback to other participants so that they update their content as well on their next turn_.
+- Apply all updates to your content in order to maintain the whiteboard validated, and free of redundancies, duplications and obsolete historical facts — and provide feedback to other participants so that they update their content as well on their next turn.
 
 ### Document Structure
 
 - Do not add or remove sections without approval from all active participants.
 - If a section exceeds 100 lines, propose in the parking lot that it moves to an attachment, retaining a link and a concise summary in `## Attachments`; other participants might disagree and prefer making the section more compact, cutting repetitions, obvious statements, and historical notes.
 - Record out-of-scope items in `## Follow-ups`.
-- Every `changes` bullet and parking-lot item is at most 120 characters.
 - Never fix a settled statement by appending an italic note — rewrite the headline and contents instead.
 - Resolved parking-lot items are immediately moved to `parking-lot__resolved.md` attachment.
 - The parking lot itself stays free of finished items.

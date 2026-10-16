@@ -2,9 +2,9 @@
 
 ## Namespace: Art Boards
 
-**Purpose:** Publish whiteboard session coordination packages under the `@art-boards` scope.
+**Purpose:** Visualize resources and coordinate agent sessions with collaboration tools.
 
-**Description:** Grouping of the Art Boards publishable packages and their scaffolding.
+**Description:** Tools for discovering and visualizing resources, and coordinate agent sessions.
 
 **Owner:** Project: Art Boards
 

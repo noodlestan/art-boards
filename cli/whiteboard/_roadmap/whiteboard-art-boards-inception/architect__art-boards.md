@@ -30,7 +30,7 @@ Architect of the Art Boards project (`@art-boards/whiteboard-cli` at `$ART_BOARD
 
 ## Deliverables
 
-- Roadmap milestones `one`, `next`, `3000` — written directly to `_roadmap/` critiqued and reviewed on the board.
+- Roadmap milestones `one`, `next`, `3000` — written directly to `_roadmap/`, critiqued and reviewed on the board.
 - Package registration upkeep: records, guides, deployment status flips on publish.
 - Reviews of producer plans before delegation — message board skill and domain included.
 
