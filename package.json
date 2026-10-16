@@ -14,10 +14,19 @@
   },
   "prettier": "@noodlestan/prettier-config",
   "scripts": {
+    "turbo": "turbo",
+    "dev": "turbo run dev --ui tui",
+    "clean": "turbo run build:clean",
     "lint": "prettier . -c",
-    "lint:fix": "prettier . -c --write"
+    "lint:fix": "prettier . -c --write",
+    "extract": "echo no purrception yet",
+    "ci:root": "npm run lint",
+    "ci": "npm run ci:root && turbo run ci"
   },
   "devDependencies": {
-    "@noodlestan/prettier-config": "0.1.0"
+    "@noodlestan/prettier-config": "0.1.0",
+    "lefthook": "2.1.9",
+    "prettier": "3.8.4",
+    "turbo": "2.9.18"
   }
 }
