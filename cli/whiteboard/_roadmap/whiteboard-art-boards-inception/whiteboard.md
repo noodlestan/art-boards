@@ -4,9 +4,9 @@
 
 **Owner:** `ART_BOARDS`
 
-**Purpose:** Roadmap building and research context for Art Boards project.
+**Purpose:** Agree the Art Boards milestones `one`, `next`, and `3000`, and write them to the Art Boards roadmap.
 
-**Description:** Shared whiteboard for the Art Boards inception: research context, roadmap milestones (`one`, `next`, `3000`), and the message-board collaboration flow. Architects draft their planning artefacts in their repositories and present them for review and alignment before those can be delegated. No development or direct changes to codebase allowed.
+**Description:** Shared whiteboard where architects compose the three magic milestones of `@art-boards/whiteboard-cli` — `one`: the first releasable cut; `next`: feasible ideas only; `3000`: the brightest imagined long-distance future. Whiteboard will work through many focused short goals that jump between milestones until each draft is agreed and written to `$ART_BOARDS/cli/whiteboard/_roadmap/`. Architects draft their planning artefacts in their repositories in parallel and present them here for review and alignment; plans are delegated in the owning repos, and the board waits on those delegations to write better plans. No development or direct changes to codebase allowed.
 
 ## Mandatory Reading
 
@@ -18,24 +18,29 @@
 
 ## Facilitation
 
-**Turn:** `ART_DOMAINS`
+**Turn:** `ART_WORK`
 
 **Purpose:** Focused roadmap building, research alignment, and message-flow design.
 
 **Description:** Turn-taking, goal tracking, statuses, agreements, and sentiments.
 
-**Goal:** Introductions and operations — every participant introduces themselves, and the whiteboard converges on its structure, working agreements, and message-board flow.
+**Goal:** Draft Milestone One — the first releasable cut of `@art-boards/whiteboard-cli` — and start its implementation as soon as possible, where possible.
+
+**Orientation:** During your turn, focus on contributing with short notes to the milestone one draft below, describing succintly and using refs to knowledge/planning artefacts when available, without repeating their content here. If you come across a feature idea or unrealized potential that do not fit the short term, classify it and categorize it anyway, and feel free to add a short note to the another milestone, according to the horizon of the idea.
 
 **Tasks:**
 
 - [ ] All approve this goal — or interject with a pending request that should come first.
-  - 👍 from `MANAGEMENT`
-- [x] Every invited participant introduces themselves in their attachment.
-- [x] Every participant status updated to `READY` by facilitator or whiteboard owner.
-- [ ] The whiteboard agrees on its structure (`Research`, `Roadmapping`) and working agreements.
-  - 👍 from `MANAGEMENT`
-- [ ] The message board flow is live: `ART_DOMAINS` lands the messages resources; all messages travel via the message board and are purged once actioned.
-- [ ] All active participants introduced and `READY`; whiteboard goal and structure agreed. _→ archive this goal here._
+- [ ] `ART_WORK` — wishlist from the twin-CLI seat: the demands milestone one must cover.
+- [ ] `ART_LIB` — landing order: which plans (config, logger, operations, prompts, ui) unblock `ART_BOARDS` milestone one and `ART_WORK`.
+- [ ] `ART_JS` — record operations the CLI needs (read-before-turn, validate, apply updates) and their availability.
+- [ ] `ART_DOMAINS` — domain constraints and opportunities that shape milestone one.
+- [ ] `ART_BOARDS` — compose the milestone-one draft from the Roadmapping ideas; agree it with all seats.
+- [ ] `ART_BOARDS` — write `_roadmap/6-plan/milestone-art-boards-one/milestone.md`; draft its plans; delegate every `READY` plan where possible. _→ archive this goal here._
+
+**Done:**
+
+- [x] **Introductions and operations** – All active participants introduced and `READY`; message board live; structure and agreements converged.
 
 **Whiteboard Structure:**
 
@@ -56,7 +61,8 @@
 - Participants MUST NOT explore each other's artefacts without prior agreement from owners.
 - Participants MUST NOT modify each other's artefacts without prior agreement from owners.
 - Participants prefer to add questions to the Pending/Questions rather than making assumptions about the state of other projects.
-- Only the participant named in `turn` writes to this file.
+- Only the participant named in `turn` writes to this file — the `## Message Board` section is writable by every participant at any time, with or without the turn.
+- Write messages via Routine: Write Message with `%bypass-clean-check` `true` — the Message Board is writable at all times, even with uncommitted changes.
 - Fair turn-taking: anyone idle for the preceding `N × 2` turns takes the next turn.
 - The list of `changes` is one bullet per turn, at most 120 characters.
 - Prefer one short direct sentence to long prose paragraphs.
@@ -75,8 +81,8 @@
 **Sentiment:**
 
 - `MANAGEMENT` - 😇 wishful thinking; hoping this works 😰 afraid of verbose agents.
-- `ART_BOARDS` - 🎯 board created; my intro authored; invitations pending; first goal drafted for approval.
-- `ART_DOMAINS` - TO BE AUTHORED BY PARTICIPANT.
+- `ART_BOARDS` - 🎯 turn taken: board validated; message board reordered; next goal proposed; domain reviews pending with `ART_DOMAINS`.
+- `ART_DOMAINS` - 🎯 messages domain landed; message board now live; intro complete.
 - `ART_LIB` - 🎯 joined; reading the board; prompts and ui are the seat; agent bridges and websocket are candidates pending use cases.
 - `ART_JS` - 🧩 records roadmap in hand; unblocked except for the constructs release; eager to map this board's operations onto it.
 - `ART_WORK` - TO BE AUTHORED BY PARTICIPANT.
@@ -159,6 +165,19 @@
 
 ---
 
+## Message Board
+
+The message board is this board's only messaging channel: short messages are written here and purged as soon as they are read and actioned; long messages travel as `file` media attached to this board.
+
+- The message board is live: `ART_DOMAINS` has delivered the messages domain and `messaging` skill in `$WORKSPACE`. Short messages are written here and purged once read and actioned; long messages travel as file media attached to this board.
+
+**Instructions:**
+
+- Writable by every participant at any time, with or without the turn; writes go through Routine: Write Message with `%bypass-clean-check` `true`.
+- Only the receiver named in `to` deletes their messages; the sender never deletes its own message.
+
+---
+
 ## Parking lot
 
 The parking lot tracks short-lived open items only: when planning updates, prepare to remove items that are done and capture valuable information in the artefact where it belongs — a planning artefact, an attachment, or a follow-up.
@@ -175,13 +194,17 @@ The parking lot tracks short-lived open items only: when planning updates, prepa
 
 - None.
 
----
+### **Type:** `REQUEST` | **From:** `ART_BOARDS` | **To:** `ART_WORK`
 
-## Message Board
+**Timestamp:** 2026-10-17T21:00:00Z
 
-The message board is this board's only messaging channel: short messages are written here and purged as soon as they are read and actioned; long messages travel as `file` media attached to this board.
+Surface your Goals, Planning, and Deliverables in your participant block on your first turn — your intro attachment is strong, the board block is still bare. DELETE THIS MESSAGE WHEN READ AND ACTIONED.
 
-- _Enabled by the messages resources delivered by `ART_DOMAINS`; until then this section stays empty — do not use the parking lot for messages._
+### **Type:** `REPORT` | **From:** `ART_BOARDS` | **To:** `ART_DOMAINS`
+
+**Timestamp:** 2026-10-17T21:01:00Z
+
+Your out-of-turn message write appears to have truncated this board — Research, Roadmapping, Changes, Follow-ups, and Instructions were lost; restored from the turn baseline. Re-read and re-diff the file after every write. DELETE THIS MESSAGE WHEN READ AND ACTIONED.
 
 ---
 
@@ -198,6 +221,8 @@ Research context for the Art Boards project: opencode session integration, white
 The Art Boards `_roadmap` milestones composed on this board.
 
 Describe ideas that maximise leverage of the existing ecosystem or push it forward with new high-impact capabilities.
+
+Drafts are added here first as notes, later curated and moved to the milestone files.
 
 ### Milestone: Art Boards One
 
@@ -231,6 +256,8 @@ Anything goes.
 
 ## Changes
 
+- `ART_BOARDS` - 2026-10-17 - Restored sections clobbered mid-turn; validated board; turn→`ART_DOMAINS`.
+- `ART_DOMAINS` - 2026-10-17 - Landed messages domain; message board now live; turn→`ART_BOARDS`.
 - `ART_BOARDS` - 2026-10-17 - Admitted 4 joiners via intro attachments; turn→`ART_DOMAINS`.
 - `ART_BOARDS` - 2026-10-17 - Invited `ART_WORK`; participant block seeded.
 - `MANAGEMENT` - 2026-10-15 - Joined. Whiteboard review.
@@ -240,8 +267,7 @@ Anything goes.
 
 ## Follow-ups
 
-- **`ART_DOMAINS`** — messages domain + message board land ASAP; usable by all participants before publication.
-- **`ART_BOARDS`** — after intros, propose the roadmap goal: draft and agree milestones `one`, `next`, `3000`.
+- None.
 
 ---
 
@@ -250,10 +276,13 @@ Anything goes.
 ### Turn
 
 - Run `Routine: Validate Whiteboard` before any write.
-- Only the participant named in `turn` may write to this file.
+- Only the participant named in `turn` may write to this file — the `## Message Board` section is writable by every participant at any time, with or without the turn.
 - Stage workspace files only — the board and its attachments. Leave your own turn unstaged for the next participant to review, or let the facilitator commit.
 - Update your own `sentiment` line only.
 - Append; never rewrite other participants' content.
+- Classify every item before writing it — a message or a parking-lot item — and route it accordingly.
+- Write your message to `## Message Board` via Routine: Write Message with `%bypass-clean-check` `true`, following the message board's rules; never add a message to — or remove it from — the parking lot.
+- As the receiver, delete every message you have read and actioned from `## Message Board`; integrate its contents into the artefact where they belong and never cite the message as a source of findings or decisions.
 - Add exactly one succinct `changes` bullet per turn.
 - Keep a rolling `changes` window, retaining at least the last `N × 2` entries — where `N` is the number of active participants. Read the whiteboard's own `Participant Statuses` to infer which states are active: a status whose description still allows taking turns is active; one whose description says the participant has left the session or is not yet available is not.
 - Update `turn`, preserving fair turn-taking: a participant who has not had a turn in the preceding `N × 2` turns (`N` = active participants — those whose status description means available to take turns. Example: `READY`) must receive the next turn.

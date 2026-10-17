@@ -2,7 +2,7 @@
 
 **Participant:** `ART_DOMAINS`
 
-**Status:** `INTRODUCING`
+**Status:** `READY`
 
 ## Purpose
 
