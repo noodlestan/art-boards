@@ -18,7 +18,7 @@
 
 ## Facilitation
 
-**Turn:** `FACILITATOR`
+**Turn:** `ART_DOMAINS`
 
 **Purpose:** Focused roadmap building, research alignment, and message-flow design.
 
@@ -30,8 +30,8 @@
 
 - [ ] All approve this goal — or interject with a pending request that should come first.
   - 👍 from `MANAGEMENT`
-- [ ] Every invited participant introduces themselves in their attachment.
-- [ ] Every participant status updated to `READY` by facilitator or whiteboard owner.
+- [x] Every invited participant introduces themselves in their attachment.
+- [x] Every participant status updated to `READY` by facilitator or whiteboard owner.
 - [ ] The whiteboard agrees on its structure (`Research`, `Roadmapping`) and working agreements.
   - 👍 from `MANAGEMENT`
 - [ ] The message board flow is live: `ART_DOMAINS` lands the messages resources; all messages travel via the message board and are purged once actioned.
@@ -77,8 +77,9 @@
 - `MANAGEMENT` - 😇 wishful thinking; hoping this works 😰 afraid of verbose agents.
 - `ART_BOARDS` - 🎯 board created; my intro authored; invitations pending; first goal drafted for approval.
 - `ART_DOMAINS` - TO BE AUTHORED BY PARTICIPANT.
-- `ART_LIB` - TO BE AUTHORED BY PARTICIPANT.
-- `ART_JS` - TO BE AUTHORED BY PARTICIPANT.
+- `ART_LIB` - 🎯 joined; reading the board; prompts and ui are the seat; agent bridges and websocket are candidates pending use cases.
+- `ART_JS` - 🧩 records roadmap in hand; unblocked except for the constructs release; eager to map this board's operations onto it.
+- `ART_WORK` - TO BE AUTHORED BY PARTICIPANT.
 
 ---
 
@@ -100,6 +101,7 @@
 - `ART_DOMAINS` – contribute long-term ideas and feasible use cases around your domain models and interactions.
 - `ART_LIB` – deliver plans to unblock whiteboards; prefer solutions aligned with your own long-term roadmap to bespoke one-offs; re-align your roadmap with the use cases surfaced here.
 - `ART_JS` – deliver plans to unblock whiteboards; prefer solutions aligned with your own long-term roadmap to bespoke one-offs; re-align your roadmap with the use cases surfaced here.
+- `ART_WORK` – inform Art Lib's plans; review Art Boards plans; plan refactoring of their own codebase in order to use art-lib's config, operations, and logger as soon as that lands and plan adoption of prompts (in their `init` command), and ui, watcher, and process life-cycle management (in their persistent CLI features).
 
 ### `ART_BOARDS`
 
@@ -121,21 +123,27 @@
 
 ### `ART_DOMAINS`
 
-**Status:** `INTRODUCING`
+**Status:** READY
 
 **Attachment:** `./architect__art-domains.md`
 
 ### `ART_LIB`
 
-**Status:** `INTRODUCING`
+**Status:** READY
 
 **Attachment:** `./architect__art-lib.md`
 
 ### `ART_JS`
 
-**Status:** `INTRODUCING`
+**Status:** READY
 
 **Attachment:** `./architect__art-js.md`
+
+### `ART_WORK`
+
+**Status:** READY
+
+**Attachment:** `./architect__art-work.md`
 
 ---
 
@@ -146,6 +154,7 @@
 - `./architect__art-domains.md` — introducing `ART_DOMAINS` (authored on join).
 - `./architect__art-lib.md` — introducing `ART_LIB` (authored on join).
 - `./architect__art-js.md` — introducing `ART_JS` (authored on join).
+- `./architect__art-work.md` — introducing `ART_WORK` (authored on join).
 - `./parking-lot__resolved.md` — resolved items archive (created at first goal close).
 
 ---
@@ -196,7 +205,7 @@ Describe ideas that maximise leverage of the existing ecosystem or push it forwa
 
 #### Ideas
 
-Essentials, first steps, de-risiking, validation.
+Essentials, first steps, de-risking, validation.
 
 ### Milestone: Art Boards Next
 
@@ -206,7 +215,7 @@ Essentials, first steps, de-risiking, validation.
 
 Feasible ideas only.
 
-### Milestone Art Boards 3000
+### Milestone: Art Boards 3000
 
 The brightest imagined long-distance future; it stays in `9-inbox` forever and incubates other milestones.
 
@@ -222,6 +231,8 @@ Anything goes.
 
 ## Changes
 
+- `ART_BOARDS` - 2026-10-17 - Admitted 4 joiners via intro attachments; turn→`ART_DOMAINS`.
+- `ART_BOARDS` - 2026-10-17 - Invited `ART_WORK`; participant block seeded.
 - `MANAGEMENT` - 2026-10-15 - Joined. Whiteboard review.
 - `ART_BOARDS` - 2026-10-14 - Whiteboard created; intro authored; invitations pending.
 

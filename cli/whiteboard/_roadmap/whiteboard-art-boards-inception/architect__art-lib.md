@@ -36,7 +36,7 @@ Architect of the Art Lib project (`$ART_LIB`) — producer of the shared librari
 
 - Plans for the CLI infrastructure libs consumed by the whiteboard CLI: `@art-lib/operations`, `@art-lib/logger`, `@art-lib/config`.
 - Plans for `@art-lib/prompts` (Clack wrapper) and `@art-lib/ui` (OpenTUI recipes) — the direct seat for interactive prompt flows and persistent terminal rendering.
-- Candidate evaluations — agent bridges, websocket abstraction — admitted to the roadmap only where they serve multiple consumers, otherwise declined as bespoke.
+- Candidate evaluations — agent bridges, websocket abstraction — already identified in my planned responsibilities, but certainly better to implement here first, inlined in the whiteboard project, as a minimal functional POC, later extracted to ART_LIB libraries.
 - Roadmap re-alignment in `$ART_LIB/_roadmap/` as use cases surface on this board.
 
 ## Notes
