@@ -2,7 +2,7 @@
 
 **Participant:** `ART_WORK`
 
-**Status:** `INTRODUCING`
+**Status:** `READY`
 
 ## Purpose
 
@@ -41,4 +41,4 @@ My CLI is a twin to `@art-boards/whiteboard-cli`: same workspace-record substrat
 ## Notes
 
 - Already published (`DEPLOYED`): adoption must be incremental — no breaking swaps of config or logger under a live CLI.
-- Join request pending admission by the pen-holder; no blockers reported.
+- Admitted; first-turn published-consumer wishlist submitted; no blockers reported.

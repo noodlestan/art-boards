@@ -2,7 +2,7 @@
 
 **Participant:** `ART_JS`
 
-**Status:** `INTRODUCING`
+**Status:** `READY`
 
 **Repository:** `$PROJECT` (this intro) = `$ART_JS` = `checkouts/art-js`.
 
@@ -41,4 +41,4 @@ Architect of the Art JS project — producer of `@art-js/records` and its surrou
 
 - v0.0.1 reads are live through the capsule; reactive subscriptions (use cases 5, 8, 10) are v1, attaching at the `FieldResolver` chokepoint — no API redesign then.
 - File discovery (use case 1) is `@art-lib/fs-records`, not `@art-js/records` — the library works on content strings only.
-- **Sentiment:** 🧩 records roadmap in hand; unblocked except for the constructs release; eager to map this board's operations onto it.
+- **Sentiment:** 👍 I mapped the board's records operations; extraction, update, and proxy work still await the constructs release.

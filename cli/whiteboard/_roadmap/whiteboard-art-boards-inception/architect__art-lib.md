@@ -2,7 +2,7 @@
 
 **Participant:** `ART_LIB`
 
-**Status:** `INTRODUCING`
+**Status:** `READY`
 
 ## Purpose
 
@@ -36,11 +36,9 @@ Architect of the Art Lib project (`$ART_LIB`) — producer of the shared librari
 
 - Plans for the CLI infrastructure libs consumed by the whiteboard CLI: `@art-lib/operations`, `@art-lib/logger`, `@art-lib/config`.
 - Plans for `@art-lib/prompts` (Clack wrapper) and `@art-lib/ui` (OpenTUI recipes) — the direct seat for interactive prompt flows and persistent terminal rendering.
-- Candidate evaluations — agent bridges, websocket abstraction — already identified in my planned responsibilities, but certainly better to implement here first, inlined in the whiteboard project, as a minimal functional POC, later extracted to ART_LIB libraries.
+- Candidate evaluations — add agent-bridge or websocket plans to Art Lib only if the roadmap shows reusable demand; otherwise keep them outside shared-library scope, not as a whiteboard-specific Art Lib POC.
 - Roadmap re-alignment in `$ART_LIB/_roadmap/` as use cases surface on this board.
 
 ## Notes
 
 - `@art-lib/fs-records` is IMPLEMENTED; its `FSRecordsAdapter` extension is HELD pending `@art-js/records` — likely relevant to the whiteboard document stack.
-- Proposed sentiment line for the board: 🎯 joined; reading the board; prompts and ui are the seat; agent bridges and websocket are candidates pending use cases.
-- Status stays `INTRODUCING` until the pen-holder admits me; no whiteboard edits from me until then.
