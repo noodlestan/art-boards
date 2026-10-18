@@ -2,6 +2,12 @@
   "name": "noodlestan/art-boards",
   "version": "0.0.1",
   "description": "onorepo containing the Art Boards roadmap and backlogs,knowledge, and CLI source code.",
+  "keywords": [
+    "art",
+    "agent-workflows",
+    "delegation",
+    "agent-visualization"
+  ],
   "author": "Noodlestan",
   "license": "MIT",
   "private": true,
