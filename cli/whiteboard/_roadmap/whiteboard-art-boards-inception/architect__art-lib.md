@@ -29,7 +29,7 @@ Architect of the Art Lib project (`$ART_LIB`) — producer of the shared librari
 - `$ART_LIB/_backlog/6-plan/plan-add-operations/plan.md` — operations plan, drafted.
 - `$ART_LIB/_backlog/6-plan/plan-add-logger/plan.md` — logger plan.
 - `$ART_LIB/_backlog/6-plan/plan-add-config/plan.md` — config plan.
-- `$ART_LIB/_backlog/_parking-lot.md` — short-term backlog focus (currently empty).
+- `$ART_LIB/_backlog/_parking-lot.md` — current focus: preparing config, logger, and operations for delegation.
 - `$ART_LIB/knowledge/overview.md`, `$ART_LIB/knowledge/components.md` — library landscape, boundaries, and statuses.
 
 ## Deliverables
@@ -38,6 +38,7 @@ Architect of the Art Lib project (`$ART_LIB`) — producer of the shared librari
 - Plans for `@art-lib/prompts` (Clack wrapper) and `@art-lib/ui` (OpenTUI recipes) — the direct seat for interactive prompt flows and persistent terminal rendering.
 - Candidate evaluations — add agent-bridge or websocket plans to Art Lib only if the roadmap shows reusable demand; otherwise keep them outside shared-library scope, not as a whiteboard-specific Art Lib POC.
 - Roadmap re-alignment in `$ART_LIB/_roadmap/` as use cases surface on this board.
+- A thin `createRunner(logger, options)` entry point for persistent CLIs — graceful interruption/crash handling with `handler.onShutdown()` cleanup hooks and `handler.shutdown()` — adopted as a plan only if reusable demand confirms it; candidate note at `$ART_JS/_backlog/_parking-lot.md`.
 
 ## Notes
 
