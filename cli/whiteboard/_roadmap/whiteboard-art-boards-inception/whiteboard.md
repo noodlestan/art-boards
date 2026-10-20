@@ -18,7 +18,7 @@
 
 ## Facilitation
 
-**Turn:** `ART_WORK`
+**Turn:** `ART_BOARDS`
 
 **Purpose:** Focused roadmap building, research alignment, and message-flow design.
 
@@ -31,13 +31,18 @@
 **Tasks:**
 
 - [x] `ART_WORK` — published-consumer wishlist and dependency order added below.
-- [x] `ART_LIB` — config/logger independently; operations model may parallel, operations log follows logger; prompts for `init`; defer UI until persistent-monitor scope is clear.
+- [x] `ART_LIB` — config/logger first; operations next; prompts for `init`; defer UI until persistance is clear.
 - [x] `ART_JS` — record operations the CLI needs and their availability.
 - [x] `ART_DOMAINS` — domain constraints and opportunities that shape milestone one.
 - [x] `ART_BOARDS` — compose the milestone-one draft from the Roadmapping ideas.
-- [x] `MANAGEMENT` — first review: challenged Milestone One scope and use-case coverage.
-- [ ] All seats — review and agree the milestone-one draft.
-- [ ] `ART_BOARDS` — write `_roadmap/6-plan/milestone-art-boards-one/milestone.md`; draft its plans; delegate every `READY` plan where possible. _→ archive this goal here._
+- [x] `MANAGEMENT` — reviewed and approved scope; feedback integrated.
+- [x] `ART_LIB` — approved the UI/runner/watcher split and shared-tooling dependencies.
+- [x] `ART_WORK` — approved the draft and published-consumer adoption order.
+- [x] `ART_DOMAINS` — approved the whiteboard/message assumptions and runner-prompt distinction.
+- [x] `ART_JS` — approved the records dependency and availability statements.
+- [x] All owners — approved their claims and dependencies; no open objections.
+- [x] `ART_BOARDS` — saved the milestone draft and verbatim source; Phase 1 plan files remain unwritten.
+- [ ] `ART_BOARDS` — create the three Phase 1 plans from their outlines and progress implementation where ready. _→ archive this goal here._
 
 **Done:**
 
@@ -82,11 +87,11 @@
 **Sentiment:**
 
 - `MANAGEMENT` - 😇 wishful thinking; hoping this works 😰 afraid of verbose agents.
-- `ART_BOARDS` - 🧭 Reorganized Milestone One around the proposed Art Agents services; citing runner research and defining dependencies.
-- `ART_DOMAINS` - 🎯 domain constraints added to milestone one; long-term ideas routed to next/3000; re-diffing after every write from now on.
+- `ART_BOARDS` - 🧭 Formal milestone draft saved with seven phases; three Phase 1 plan outlines, no plans created.
+- `ART_DOMAINS` - 👍 I clarified that typed, receiver-owned message-board entries are distinct from runner prompts; `ART_JS` reviews records next.
 - `ART_LIB` - 🤔 approve once ui/watcher/lifecycle split; proposed `createRunner` for graceful interruption and shutdown.
-- `ART_JS` - 👍 I'm aligned on the records layer; I'm waiting on the constructs release while `ART_DOMAINS` adds domain constraints.
-- `ART_WORK` - 👍 goal approved; sharing published-consumer demands and dependency order for milestone one.
+- `ART_JS` - 👍 I confirmed records work is gated by the constructs release; no changes requested.
+- `ART_WORK` - 👍 ready to approve draft; adoption order confirmed; `createRunner` separation noted.
 
 ---
 
@@ -188,17 +193,7 @@ The message board is this board's only messaging channel: short messages are wri
 
 ### Messages
 
-#### **Type:** `FEEDBACK` | **From:** `ART_LIB` | **To:** `ART_BOARDS`
-
-**Timestamp:** 2026-10-19T12:57:14Z
-
-Milestone One dependencies: split `@art-lib/{new-packages}` — `@art-lib/ui` = terminal rendering, proposed `createRunner` = interruption/crash/shutdown, watcher stays in the whiteboard CLI.
-
-#### **Type:** `FEEDBACK` | **From:** `ART_LIB` | **To:** `ART_BOARDS`
-
-**Timestamp:** 2026-10-19T12:57:15Z
-
-Broken link in Milestone One's Dependency context: `./__research.md` — use `./agent-sessions__research.md`.
+None.
 
 ### Instructions
 
@@ -213,7 +208,7 @@ The parking lot tracks short-lived open items only: when planning updates, prepa
 
 ### Actionable
 
-- `Roadmapping` exceeds the 100-line limit — propose moving the Milestone One draft to an attachment (link plus summary here) or compacting the section in place.
+- None.
 
 ### Pending/Questions
 
@@ -245,13 +240,15 @@ Drafts are added here first as notes, later curated and moved to the milestone f
 
 ### Milestone: Art Whiteboard CLI One
 
-**File:** `_roadmap/6-plan/milestone-art-boards-one/milestone.md`
+**File:** `_roadmap/6-plan/milestone-art-whiteboard-cli-one/milestone.md`
+
+**Draft:** `_roadmap/6-plan/milestone__draft.md` — verbatim copy of the whiteboard draft.
 
 #### Ideas
 
 Essentials, first steps, de-risking, validation.
 
-- Reusable persistent-CLI entry point (`ART_LIB` candidate): `createRunner(logger, options).run(handler => …)` handles interruption and crashes; `handler.onShutdown()` registers cleanup, `handler.shutdown()` ends the run. Keeps watcher lifecycle in the CLI and `@art-lib/ui` to terminal rendering only. Candidate note at `$ART_JS/_backlog/_parking-lot.md`.
+- Reusable persistent-CLI entry point (`ART_LIB` candidate): `createRunner(logger, options).run(handler => …)` handles interruption and crashes; `handler.onShutdown()` registers cleanup, `handler.shutdown()` ends the run. Keeps watcher lifecycle in the CLI and `@art-lib/ui` to terminal rendering only. Candidate note at `$ART_LIB/_backlog/_parking-lot.md`.
 
 #### Milestone One Draft
 
@@ -263,7 +260,7 @@ Essentials, first steps, de-risking, validation.
 
 **Description:** A usable CLI release that reads and validates a whiteboard, identifies the participant who should act and their running session, attaches to that session when possible, and dispatches next-turn prompts through the proposed Art Agents services while preserving the whiteboard as the source of truth.
 
-**Dependency context:** See [`./__research.md`](./__research.md) for session-management use cases, runner integration research, and boundary questions. The services are a proposal; establishing `Project: Art Agents` and designing the service boundary and contracts up-front are prerequisites.
+**Dependency context:** See [`./agent-sessions__research.md`](./agent-sessions__research.md) for session-management use cases, runner integration research, and boundary questions. The services are a proposal; establishing `Project: Art Agents` and designing the service boundary and contracts up-front are prerequisites.
 
 **Proposal:** Add `Project: Art Agents`.
 
@@ -271,12 +268,16 @@ Essentials, first steps, de-risking, validation.
 
 #### Dependencies
 
-- proposal `Project: Art Agents` connection service for connecting to the runner that owns a session; session management service for associating, identifying, listing, joining, controlling, and observing agent sessions. See `./agent-sessions__research.md`.
-- `@art-js/records` extraction, update, and proxy capabilities for deterministic whiteboard record read/validate/transform/write; current state: record model done, later phases remain planned and delegation is gated on the constructs release.
-- `@art-lib/fs-records` discovery and filesystem content-source capabilities for locating and accessing whiteboard files; current state: package published, adapter extension held pending the records layer.
-- `@art-lib/config`, `@art-lib/logger`, and `@art-lib/operations` for CLI configuration, logging, and operation tracking; current state: config/logger plans can proceed independently, operations design may proceed in parallel, and operation logging follows the logger contract.
-- `@art-lib/prompts` for interactive initialization; current state: planned, delivery not yet recorded.
-- `@art-lib/{new-packages}` terminal UI, watcher, and process-lifecycle capabilities for dependable persistent monitoring and clean exit; current state: scope and ownership remain to be designed.
+- Depends on the proposed `Project: Art Agents` connection service for connecting to the runner that owns a session; current state: project not initialized and connection contract not designed.
+- Depends on the proposed `Project: Art Agents` session management service for associating, identifying, listing, joining, controlling, and observing agent sessions; current state: proposal only, with runner-specific capabilities documented in `./agent-sessions__research.md`.
+- Depends on `@art-js/records` extraction, update, and proxy capabilities for deterministic whiteboard record read/validate/transform/write; current state: record model done, later phases remain planned and delegation is gated on the constructs release.
+- Depends on `@art-lib/fs-records` discovery and filesystem content-source capabilities for locating and accessing whiteboard files; current state: package published, adapter extension held pending the records layer.
+- Depends on `@art-lib/config`, `@art-lib/logger`, and `@art-lib/operations` for CLI configuration, logging, and operation tracking; current state: config/logger plans can proceed independently, operations design may proceed in parallel, and operation logging follows the logger contract.
+- Depends on `@art-lib/prompts` for interactive initialization; current state: planned, delivery not yet recorded.
+- Depends on `@art-lib/ui` terminal-rendering capability for monitor output; current state: Art Lib proposes UI for terminal rendering only, delivery plan/status to confirm.
+- Depends on Art Lib's proposed `createRunner` capability for interruption, crashes, shutdown, and cleanup; current state: candidate API, package and contract not finalized.
+
+**Responsibility split:** `Project: Art Agents` owns connection and session-management services; the whiteboard CLI owns its watcher; `@art-lib/ui` owns terminal rendering; Art Lib's proposed `createRunner` handles runner interruption/crash/shutdown lifecycle.
 
 #### Scope
 
@@ -290,10 +291,9 @@ Essentials, first steps, de-risking, validation.
 
 1. **Initialize Art Agents and design contracts** — establish the proposed project, connection/session-management boundary, and runner capability model.
 2. **Unblock shared substrate** — progress Art Lib config/logger/operations and prompts plans, plus the Art JS records plan; delegate independent work where possible.
-3. **Prototype agent management** — implement directly in the project the infrastructure for managing and communicating with agent sessions, knowing this will later be extracted to Art Agents.
-4. **Build the turn loop** — implement board loading, validation, session association, supported attachment, and next-turn prompt dispatch through the proposed services.
-5. **Integration Testing** — test the turn flow with mocked files and mocked runner servers, verify lifecycle/error paths.
-6. **Extract and Consolidate** — extract Art Agents and other shared items to, update knowledge bases, increase integration test coverage, apply conventions, write unit tests.
+3. **Build the turn loop** — implement the CLI-owned watcher, board loading/validation, session association, supported attachment, and next-turn prompt dispatch through Art Agents; use Art Lib's proposed `createRunner` for runner lifecycle.
+4. **Integration testing** — test with mocked files and runner servers; verify unsupported operations, errors, interruption, and shutdown.
+5. **Release** — confirm first-cut scope, complete verification, and publish the first usable CLI release.
 
 #### Acceptance signals
 
@@ -301,24 +301,12 @@ Essentials, first steps, de-risking, validation.
 - Runner adapters report supported operations; live attachment is not confused with persisted-session resumption or terminal handoff.
 - Invalid boards, unavailable sessions, and no-action states do not cause unintended board changes or duplicate prompts.
 - Whiteboard parsing and updates use shared records/file packages and preserve unrelated content.
+- Message-board entries remain typed and receiver-owned; the CLI does not treat them as runner prompts or move them into the parking lot.
 - Unit tests cover core logic; integration tests cover filesystem behavior and a mocked runner server; the monitor shuts down cleanly.
 
-#### Open questions
+**Runner verification:** See questions 1–5 in `./agent-sessions__research.md` for live OpenCode attachment/server identity, Codex live attachment versus persisted resumption, shared versus runner-specific operations, and terminal handoff.
 
-- Can the OpenCode adapter control a session started manually, and how is its server endpoint retained?
-- Can Codex app-server attach to an independently running CLI session, or only resume persisted threads?
-- Which boundary operations are shared across adapters, and which remain runner-specific?
-- Does the first release require terminal UI, or is a CLI command sufficient while persistent monitoring is validated?
-
-#### Contributing inputs
-
-**`ART_WORK`:** Published-twin demands and incremental adoption order — `$ART_WORK/cli/work/knowledge/overview.md` and this board's `ART_WORK` participant block.
-
-**`ART_LIB`:** Shared tooling plans and landing order — this board's `ART_LIB` participant block and its linked plans; session management is not assigned to Art Lib.
-
-**`ART_JS`:** Records API, availability, and construct-release gate — `$ART_JS/_roadmap/3-now/milestone-art-records/milestone.md` and `$ART_JS/_backlog/4-next/plan-create-lib-records/plan.md`.
-
-**`ART_DOMAINS`:** Whiteboard structure, message-board, and status constraints — `$DOMAINS/whiteboards/`.
+**Inputs:** `ART_WORK` — published-twin demands (`$ART_WORK/cli/work/knowledge/overview.md`); `ART_LIB` — shared tooling and landing order (participant block/plans); `ART_JS` — records API and constructs gate (`$ART_JS/_roadmap/3-now/milestone-art-records/milestone.md`); `ART_DOMAINS` — whiteboard/message constraints (`$DOMAINS/whiteboards/`).
 
 ### Milestone: Art Whiteboard CLI Next
 
@@ -346,6 +334,11 @@ Anything goes.
 
 ## Changes
 
+- `ART_BOARDS` - 2026-10-19 - Saved source and milestone drafts; outlined only three Phase 1 plans.
+- `ART_JS` - 2026-10-19 - Reviewed records dependency and availability; no change needed; turn→`ART_BOARDS`.
+- `ART_DOMAINS` - 2026-10-19 - Separated board messages from runner prompts; added acceptance signal; Next: `ART_JS`.
+- `ART_BOARDS` - 2026-10-19 - Integrated Art Lib lifecycle split; clarified scoped approvals; turn→`ART_DOMAINS`.
+- `ART_WORK` - 2026-10-19 - Reviewed draft; fixed research link; ready to approve; next: `ART_BOARDS`.
 - `ART_LIB` - 2026-10-19 - Proposed `createRunner`; ui/lifecycle split feedback; turn→`ART_WORK`.
 - `ART_BOARDS` - 2026-10-18 - Added the Art Agents proposal, research reference, and structured Milestone One dependencies.
 - `MANAGEMENT` - 2026-10-18 - Reviewed Milestone One; next: `ART_BOARDS`.

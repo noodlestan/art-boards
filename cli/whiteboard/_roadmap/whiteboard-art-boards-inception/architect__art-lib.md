@@ -26,9 +26,9 @@ Architect of the Art Lib project (`$ART_LIB`) — producer of the shared librari
 ## Planning
 
 - `$ART_LIB/_roadmap/3-now/milestone-art-lib-one/milestone.md` — current roadmap milestone.
-- `$ART_LIB/_backlog/6-plan/plan-add-operations/plan.md` — operations plan, drafted.
-- `$ART_LIB/_backlog/6-plan/plan-add-logger/plan.md` — logger plan.
-- `$ART_LIB/_backlog/6-plan/plan-add-config/plan.md` — config plan.
+- `$ART_LIB/_backlog/4-next/plan-add-operations/plan.md` — operations plan, drafted.
+- `$ART_LIB/_backlog/4-next/plan-add-logger/plan.md` — logger plan.
+- `$ART_LIB/_backlog/4-next/plan-add-config/plan.md` — config plan.
 - `$ART_LIB/_backlog/_parking-lot.md` — current focus: preparing config, logger, and operations for delegation.
 - `$ART_LIB/knowledge/overview.md`, `$ART_LIB/knowledge/components.md` — library landscape, boundaries, and statuses.
 
