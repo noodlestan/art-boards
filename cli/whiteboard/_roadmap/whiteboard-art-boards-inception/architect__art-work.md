@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Architect of the Art Work project — owner of `@art-work/cli` (`$PROJECT` = `$ART_WORK` = `checkouts/art-work`; package at `$ART_WORK/cli/work`, binary `art-work-cli`, npm status `DEPLOYED`) — the workspace meta-repo orchestrator: clone, branch, link, sanity, publish across checkouts.
+Architect of the Art Work project — owner of `@art-work/cli` (`$PROJECT` = `$ART_WORKS` = `checkouts/art-work`; package at `$ART_WORKS/cli/work`, binary `art-work-cli`, npm status `DEPLOYED`) — the workspace meta-repo orchestrator: clone, branch, link, sanity, publish across checkouts.
 
 My CLI is a twin to `@art-boards/whiteboard-cli`: same workspace-record substrate, same imperative one-shot execution model deliberately shaped to grow a reactive layer later. What lands in art-lib first unblocks both of us the same way.
 
@@ -26,11 +26,11 @@ My CLI is a twin to `@art-boards/whiteboard-cli`: same workspace-record substrat
 
 ## Planning
 
-- `$ART_WORK/cli/work/_roadmap/` — CLI roadmap; `3-now/milestone-rename-art-work-to-art-box`.
-- `$ART_WORK/cli/work/_backlog/` — CLI backlog; `3-now/plan-migrate-planning-and-knowledge`, `3-now/plan-rename-repo-and-project`.
-- `$ART_WORK/cli/work/_backlog/_parking-lot.md` — short-term focus (currently no blockers).
-- `$ART_WORK/cli/work/knowledge/overview.md` — execution model, data model, config loading.
-- `$ART_WORK/_roadmap/`, `$ART_WORK/_backlog/` — repository-level planning artefacts.
+- `$ART_WORKS/cli/work/_roadmap/` — CLI roadmap; `3-now/milestone-rename-art-work-to-art-box`.
+- `$ART_WORKS/cli/work/_backlog/` — CLI backlog; `3-now/plan-migrate-planning-and-knowledge`, `3-now/plan-rename-repo-and-project`.
+- `$ART_WORKS/cli/work/_backlog/_parking-lot.md` — short-term focus (currently no blockers).
+- `$ART_WORKS/cli/work/knowledge/overview.md` — execution model, data model, config loading.
+- `$ART_WORKS/_roadmap/`, `$ART_WORKS/_backlog/` — repository-level planning artefacts.
 
 ## Deliverables
 

@@ -30,7 +30,7 @@
 | `$ART_WHITEBOARD` | `$ART_BOARDS/cli/whiteboard`      | Art Whiteboard CLI package and its planning  |
 | `$ART_LIB`        | `$WORKSPACE/checkouts/art-lib`    | Shared libraries and CLI infrastructure      |
 | `$ART_JS`         | `$WORKSPACE/checkouts/art-js`     | Shared record operations                     |
-| `$ART_WORK`       | `$WORKSPACE/checkouts/art-work`   | Published twin CLI and consumer requirements |
+| `$ART_WORKS`      | `$WORKSPACE/checkouts/art-work`   | Published twin CLI and consumer requirements |
 
 ## Summary
 
@@ -97,7 +97,7 @@ This milestone coordinates the Art Whiteboard CLI from package foundation throug
 
 ### (Scope) Project: Art Work
 
-**Record:** `$ART_WORK/_records/project.art`
+**Record:** `$ART_WORKS/_records/project.art`
 
 **Role:** Published twin CLI and consumer source for incremental-adoption requirements.
 
@@ -171,7 +171,7 @@ Planning and package verification occur from `$ART_BOARDS`; package source and w
 - Guide: Art Whiteboard CLI — `$ART_WHITEBOARD/_guide.md` — package layout and workflows.
 - Research: Agent Session Management — `$ART_WHITEBOARD/_roadmap/whiteboard-art-boards-inception/agent-sessions__research.md` — runner capabilities, boundaries, and verification questions.
 - Whiteboard: Art Whiteboard CLI Inception — `$ART_WHITEBOARD/_roadmap/whiteboard-art-boards-inception/whiteboard.md` — approved product direction and phase outline.
-- Knowledge: Art Work CLI Overview — `$ART_WORK/cli/work/knowledge/overview.md` — published-twin requirements.
+- Knowledge: Art Work CLI Overview — `$ART_WORKS/cli/work/knowledge/overview.md` — published-twin requirements.
 
 ---
 

@@ -158,7 +158,7 @@
 
 **Expectations:** `ART_LIB` — plan compatible, incremental adoption for a published consumer; `ART_BOARDS` — review Art Work planning artefacts before delegation.
 
-**Planning:** `$ART_WORK/cli/work/_roadmap/` (`3-now/milestone-rename-art-work-to-art-box`); `$ART_WORK/cli/work/_backlog/` (`3-now/plan-migrate-planning-and-knowledge`, `3-now/plan-rename-repo-and-project`); `$ART_WORK/cli/work/knowledge/overview.md`.
+**Planning:** `$ART_WORKS/cli/work/_roadmap/` (`3-now/milestone-rename-art-work-to-art-box`); `$ART_WORKS/cli/work/_backlog/` (`3-now/plan-migrate-planning-and-knowledge`, `3-now/plan-rename-repo-and-project`); `$ART_WORKS/cli/work/knowledge/overview.md`.
 
 **Deliverables:** Published-twin requirements and dependency order for shared config/logger/operations, prompt-driven `init`, and persistent process lifecycle; reviews of Art Whiteboard CLI plans.
 
