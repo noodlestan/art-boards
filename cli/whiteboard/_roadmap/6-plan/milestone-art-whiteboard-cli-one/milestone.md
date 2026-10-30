@@ -64,7 +64,7 @@ This milestone coordinates the Art Whiteboard CLI from package foundation throug
 
 - `canonicalName` — `@art-boards/whiteboard-cli`
 - `path` — `cli/whiteboard`
-- `bin` — `art-boards-whiteboard`
+- `bin` — `art-whiteboard-cli`
 - `published` — `true`
 
 **Changes:** Scaffold, provide a CLI bin, implement whiteboard/session behavior, build the web UI, and publish the first usable release.
@@ -306,7 +306,7 @@ The following three Phase 1 plans are outlined but do not yet have plan files.
 
 **Purpose:** Provide the executable command entry point for the first CLI release.
 
-**Description:** Create the `art-boards-whiteboard` bin and use Art Lib's config, logger, operations, and runner capabilities; do not add terminal UI.
+**Description:** Create the `art-whiteboard-cli` bin and use Art Lib's config, logger, operations, and runner capabilities; do not add terminal UI.
 
 **Changes:**
 
@@ -389,7 +389,7 @@ npm run ci
 
 ### Evidence
 
-- **CLI package builds** and exposes the `art-boards-whiteboard` executable.
+- **CLI package builds** and exposes the `art-whiteboard-cli` executable.
 - **Session turn flow** identifies the associated participant session and dispatches a next-turn prompt through the session-management service.
 - **Web UI** displays a current whiteboard record, turn, sentiments, and changes, with supported session interactions.
 - **Robustness** — invalid boards, unavailable sessions, and no-action states cause no unintended board changes or duplicate prompts.

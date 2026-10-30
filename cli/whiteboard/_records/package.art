@@ -41,7 +41,7 @@
 
 **Bin:**
 
-- `art-boards-whiteboard`: `./dist/index.mjs`
+- `art-whiteboard-cli`: `./dist/index.mjs`
 
 **Engines:**
 

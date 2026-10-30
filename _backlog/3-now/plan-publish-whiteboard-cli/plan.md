@@ -60,7 +60,7 @@ Minimal publishable package skeleton and the first npm release. No feature or co
 
 ### Iteration: 1 — scaffold-package-tooling
 
-**Purpose:** The package builds and exposes the `art-boards-whiteboard` bin from a minimal CLI skeleton.
+**Purpose:** The package builds and exposes the `art-whiteboard-cli` bin from a minimal CLI skeleton.
 
 **Status:** `DRAFT`
 
