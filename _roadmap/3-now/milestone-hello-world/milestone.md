@@ -10,7 +10,7 @@
 
 **Purpose:** Make the repository public, register it across the ecosystem, and publish the package to npm to claim the `@art-boards` scope.
 
-**Description:** Milestone record with 1 phase and 2 downstream plans, coordinated within `$ART_BOARDS`.
+**Description:** Milestone record with 1 phase and 1 downstream plan, coordinated within `$ART_BOARDS`.
 
 ## Mandatory Reading
 
@@ -84,13 +84,12 @@ Public availability, ecosystem registration, and the first npm publish of `@art-
 | Phase | Resource / Record                      | Status     |
 | ----- | -------------------------------------- | ---------- |
 | 1     | Plan: Register Art Boards In Ecosystem | `PLANNING` |
-| 1     | Plan: Publish Whiteboard CLI           | `PLANNING` |
 
 ## Work
 
 ### Next
 
-- Draft iterations for both plans, then delegate.
+- Draft iterations for Plan: Register Art Boards In Ecosystem, then delegate; re-plan the npm publish to claim the scope.
 
 ### Blockers
 
