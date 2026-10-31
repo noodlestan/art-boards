@@ -68,25 +68,29 @@ Package skeleton only — manifest, build/test/lint configuration, source and te
 
 **Status:** `PLANNING`
 
-**Purpose:** The package installs and builds locally through the repository workspace tooling.
+**Purpose:** The package installs, builds, tests, and lints locally through the repository workspace tooling, mirroring the sibling CLI package.
 
-**Description:** Create the package foundation — manifest, build/test/lint configuration, and source/test skeleton — and connect it to the workspace scripts.
+**Description:** Create the manifest and toolchain configuration, scaffold source, test, and release files, and connect the package scripts to the repository workspace tooling.
 
 **Instructions Mode:** `INSTRUCTIONS_SELF_CONTAINED_FILE`
 
 **Changes:**
 
-- Create the package manifest with package identity, scripts, and workspace linkage.
-- Add TypeScript, build, test, and lint configuration mirroring the sibling package.
-- Scaffold `src/` and `test/` directories and add the release files.
-- Verify the package installs and builds through the repository workspace tooling.
+- Create `package.json` with the package identity, scripts, and workspace linkage — no `bin` yet.
+- Add TypeScript and build configuration mirroring `$ART_BOARDS_WHITEBOARD`.
+- Add test and lint configuration wired to the repository conventions.
+- Scaffold `src/` and `test/` with placeholder modules.
+- Add the package release files — `README.md` and `LICENSE-MIT`.
+- Verify install, build, test, and lint through the repository scripts.
 
 #### Commits:
 
-| ID                            | Repository / Checkout / Branch           | Policy   | Hash  | Status        |
-| ----------------------------- | ---------------------------------------- | -------- | ----- | ------------- |
-| `scaffold-package-foundation` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
-| `wire-workspace-tooling`      | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
+| ID                              | Repository / Checkout / Branch           | Policy   | Hash  | Status        |
+| ------------------------------- | ---------------------------------------- | -------- | ----- | ------------- |
+| `scaffold-package-foundation`   | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
+| `scaffold-source-test-skeleton` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
+| `add-package-release-files`     | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
+| `wire-workspace-tooling`        | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
 
 ##### Commit: `scaffold-package-foundation`
 
@@ -94,7 +98,23 @@ Package skeleton only — manifest, build/test/lint configuration, source and te
 
 **Message:**
 
-scaffold(switchboard-cli): Add the package manifest, configs, and source/test skeleton.
+scaffold(switchboard-cli): Add the package manifest and build, test, and lint configuration.
+
+##### Commit: `scaffold-source-test-skeleton`
+
+**Repository:** Art Boards
+
+**Message:**
+
+scaffold(switchboard-cli): Scaffold the source and test directories with placeholders.
+
+##### Commit: `add-package-release-files`
+
+**Repository:** Art Boards
+
+**Message:**
+
+scaffold(switchboard-cli): Add the package README and license files.
 
 ##### Commit: `wire-workspace-tooling`
 
@@ -112,14 +132,19 @@ build(switchboard-cli): Connect package scripts to the repository workspace tool
 
 **Purpose:** `_records/package.art` records `@art-boards/switchboard-cli` at `cli/switchboard` with its `art-switchboard-cli` bin.
 
-**Description:** Create the package record from the package identity and keep it unpublished until the first release.
+**Description:** Create the package record from the package identity, consistent with `package.json`, and keep it unpublished until the first release.
 
 **Instructions Mode:** `INSTRUCTIONS_INLINED_IN_ITERATION`
 
 **Changes:**
 
-- Create `_records/package.art` with `canonicalName`, `path`, and `bin`.
+- Create `_records/package.art` declaring Package: Art Switchboard CLI with `canonicalName` `@art-boards/switchboard-cli`, `path` `cli/switchboard`, and `bin` `art-switchboard-cli`.
+- Keep the record consistent with the `package.json` identity.
 - Set `published` to `false`; the First Release phase flips it after the first publish.
+
+**Dependencies:**
+
+- Iteration: `scaffold-package` — provides the manifest identity the record mirrors.
 
 #### Commits:
 
