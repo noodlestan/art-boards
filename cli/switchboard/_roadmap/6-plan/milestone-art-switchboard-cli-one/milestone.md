@@ -69,6 +69,21 @@ This milestone coordinates the Art Switchboard CLI from package foundation throu
 
 **Changes:** Scaffold, provide a CLI bin, implement switchboard and session behavior, build the web UI, and publish the first usable release.
 
+### (Scope) Application: Switchboard
+
+**Record:** To be created when the application package is scaffolded.
+
+**Role:** SolidJS web UI for the Art Switchboard CLI.
+
+**Partial:**
+
+- `framework` — SolidJS.
+- `dev` — Runs standalone with `npm run dev` while the CLI serves nothing.
+- `transport` — Connects over WebSocket to the running `art-switchboard-cli` instance.
+- `serving` — Served by the CLI itself once the web UI is delivered.
+
+**Changes:** Scaffold the application package, develop it independently against a running CLI instance, and hand serving over to the CLI in the Web UI phases.
+
 ### (Scope) Project: Art Lib
 
 **Record:** `$ART_LIB/_records/project.art`
@@ -178,7 +193,7 @@ Planning and package verification occur from `$ART_BOARDS`; package source and w
 
 **Goal:** Establish a buildable Art Switchboard CLI package, an executable bin using Art Lib's shared CLI infrastructure, and a useful package knowledge base.
 
-**Description:** Scaffold the package, create its bin using Art Lib config/logger/operations/runner capabilities, and create package knowledge. The plan files live under `$ART_SWITCHBOARD/_backlog/6-plan/`.
+**Description:** Scaffold the package, create its bin using Art Lib config/logger/operations/runner capabilities, and create package knowledge. The plan files live under `$ART_SWITCHBOARD/_backlog/4-now/`.
 
 **Status:** `PLANNING`
 
@@ -263,11 +278,11 @@ Planning and package verification occur from `$ART_BOARDS`; package source and w
 
 ## Items:
 
-| Phase | Resource / Record                                                                                                               | Status  |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| 1     | Plan: Scaffold Art Switchboard CLI `$ART_SWITCHBOARD/_backlog/6-plan/plan-scaffold-art-switchboard-cli/plan.md`                 | `DRAFT` |
-| 1     | Plan: Create Art Switchboard CLI Bin `$ART_SWITCHBOARD/_backlog/6-plan/plan-create-art-switchboard-cli-bin/plan.md`             | `DRAFT` |
-| 1     | Plan: Create Art Switchboard CLI Knowledge `$ART_SWITCHBOARD/_backlog/6-plan/plan-create-art-switchboard-cli-knowledge/plan.md` | `DRAFT` |
+| Phase | Resource / Record                                                                                                              | Status     |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------ | ---------- |
+| 1     | Plan: Scaffold Art Switchboard CLI `$ART_SWITCHBOARD/_backlog/4-now/plan-scaffold-art-switchboard-cli/plan.md`                 | `PLANNING` |
+| 1     | Plan: Create Art Switchboard CLI Bin `$ART_SWITCHBOARD/_backlog/4-now/plan-create-art-switchboard-cli-bin/plan.md`             | `PLANNING` |
+| 1     | Plan: Create Art Switchboard CLI Knowledge `$ART_SWITCHBOARD/_backlog/4-now/plan-create-art-switchboard-cli-knowledge/plan.md` | `PLANNING` |
 
 ## Work
 

@@ -2,7 +2,7 @@
 
 **ID:** `create-art-switchboard-cli-knowledge`
 
-**Status:** `DRAFT`
+**Status:** `PLANNING`
 
 **Template:** `$DOMAINS/plans/templates/plan.tart`
 
@@ -59,28 +59,80 @@ Package knowledge only — index, overview, architecture/use-case references, an
 
 ## Iterations
 
-| Index | Name                  | Status  |
-| ----- | --------------------- | ------- |
-| 1     | write-index-overview  | `DRAFT` |
-| 2     | document-architecture | `DRAFT` |
+| Index | Name                  | Status     |
+| ----- | --------------------- | ---------- |
+| 1     | write-index-overview  | `PLANNING` |
+| 2     | document-architecture | `PLANNING` |
 
 ### Iteration: 1 — write-index-overview
 
+**Id:** `write-index-overview`
+
+**Status:** `PLANNING`
+
 **Purpose:** `knowledge/index.md` links a concise overview and the architecture/use-case references for the package.
 
-**Status:** `DRAFT`
+**Description:** Create the knowledge index and the package overview that orients users and contributors.
+
+**Instructions Mode:** `INSTRUCTIONS_INLINED_IN_ITERATION`
+
+**Changes:**
+
+- Create `knowledge/index.md` linking the package resources.
+- Write the package overview covering purpose and audience.
+
+#### Commits:
+
+| ID                      | Repository / Checkout / Branch           | Policy   | Hash  | Status        |
+| ----------------------- | ---------------------------------------- | -------- | ----- | ------------- |
+| `write-knowledge-index` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
+
+##### Commit: `write-knowledge-index`
+
+**Repository:** Art Boards
+
+**Message:**
+
+docs(switchboard-cli): Write the package knowledge index and overview.
 
 ### Iteration: 2 — document-architecture
 
+**Id:** `document-architecture`
+
+**Status:** `PLANNING`
+
 **Purpose:** The architecture and operating model are documented — artefact-scoped prompt prepending, external service boundaries, the Domain: Messages transport direction, TUI exclusion, setup, and verification.
 
-**Status:** `DRAFT`
+**Description:** Document how the CLI, the switchboard record, the sessions, and the SolidJS application fit together, and how the package is operated.
+
+**Instructions Mode:** `INSTRUCTIONS_INLINED_IN_ITERATION`
+
+**Changes:**
+
+- Document the architecture — CLI process, WebSocket connection, and the SolidJS application served by the CLI.
+- Document artefact-scoped prompt prepending and the session turn model.
+- Document the service boundaries — Art Lib, Art JS, and Art Agents — and the Domain: Messages transport direction.
+- Record the TUI exclusion, setup, and verification.
+
+#### Commits:
+
+| ID                                  | Repository / Checkout / Branch           | Policy   | Hash  | Status        |
+| ----------------------------------- | ---------------------------------------- | -------- | ----- | ------------- |
+| `document-switchboard-architecture` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
+
+##### Commit: `document-switchboard-architecture`
+
+**Repository:** Art Boards
+
+**Message:**
+
+docs(switchboard-cli): Document the switchboard architecture and operating model.
 
 ## Work
 
 ### Next
 
-- Refine the iterations, then write implementation instructions.
+- Write implementation instructions for the iterations, then delegate.
 
 ### Blockers
 

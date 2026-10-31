@@ -2,7 +2,7 @@
 
 **ID:** `scaffold-art-switchboard-cli`
 
-**Status:** `DRAFT`
+**Status:** `PLANNING`
 
 **Template:** `$DOMAINS/plans/templates/plan.tart`
 
@@ -57,28 +57,89 @@ Package skeleton only — manifest, build/test/lint configuration, source and te
 
 ## Iterations
 
-| Index | Name                  | Status  |
-| ----- | --------------------- | ------- |
-| 1     | scaffold-package      | `DRAFT` |
-| 2     | create-package-record | `DRAFT` |
+| Index | Name                  | Status     |
+| ----- | --------------------- | ---------- |
+| 1     | scaffold-package      | `PLANNING` |
+| 2     | create-package-record | `PLANNING` |
 
 ### Iteration: 1 — scaffold-package
 
-**Purpose:** The package installs and builds locally: manifest, build/test/lint configuration, and source/test skeleton connected to the repository workspace tooling.
+**Id:** `scaffold-package`
 
-**Status:** `DRAFT`
+**Status:** `PLANNING`
+
+**Purpose:** The package installs and builds locally through the repository workspace tooling.
+
+**Description:** Create the package foundation — manifest, build/test/lint configuration, and source/test skeleton — and connect it to the workspace scripts.
+
+**Instructions Mode:** `INSTRUCTIONS_SELF_CONTAINED_FILE`
+
+**Changes:**
+
+- Create the package manifest with package identity, scripts, and workspace linkage.
+- Add TypeScript, build, test, and lint configuration mirroring the sibling package.
+- Scaffold `src/` and `test/` directories and add the release files.
+- Verify the package installs and builds through the repository workspace tooling.
+
+#### Commits:
+
+| ID                            | Repository / Checkout / Branch           | Policy   | Hash  | Status        |
+| ----------------------------- | ---------------------------------------- | -------- | ----- | ------------- |
+| `scaffold-package-foundation` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
+| `wire-workspace-tooling`      | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
+
+##### Commit: `scaffold-package-foundation`
+
+**Repository:** Art Boards
+
+**Message:**
+
+scaffold(switchboard-cli): Add the package manifest, configs, and source/test skeleton.
+
+##### Commit: `wire-workspace-tooling`
+
+**Repository:** Art Boards
+
+**Message:**
+
+build(switchboard-cli): Connect package scripts to the repository workspace tooling.
 
 ### Iteration: 2 — create-package-record
 
+**Id:** `create-package-record`
+
+**Status:** `PLANNING`
+
 **Purpose:** `_records/package.art` records `@art-boards/switchboard-cli` at `cli/switchboard` with its `art-switchboard-cli` bin.
 
-**Status:** `DRAFT`
+**Description:** Create the package record from the package identity and keep it unpublished until the first release.
+
+**Instructions Mode:** `INSTRUCTIONS_INLINED_IN_ITERATION`
+
+**Changes:**
+
+- Create `_records/package.art` with `canonicalName`, `path`, and `bin`.
+- Set `published` to `false`; the First Release phase flips it after the first publish.
+
+#### Commits:
+
+| ID                           | Repository / Checkout / Branch           | Policy   | Hash  | Status        |
+| ---------------------------- | ---------------------------------------- | -------- | ----- | ------------- |
+| `record-switchboard-package` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
+
+##### Commit: `record-switchboard-package`
+
+**Repository:** Art Boards
+
+**Message:**
+
+records(switchboard-cli): Record the Art Switchboard CLI package and its bin.
 
 ## Work
 
 ### Next
 
-- Refine the iterations, then write implementation instructions.
+- Write implementation instructions for the iterations, then delegate.
 
 ### Blockers
 

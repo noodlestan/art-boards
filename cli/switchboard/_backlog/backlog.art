@@ -4,6 +4,6 @@
 
 **Purpose:** Hold the planning artefacts of Package: Art Switchboard CLI.
 
-**Description:** Filesystem with 0-archive, 3-now, 4-next, and 6-plan directories.
+**Description:** Filesystem with 4-now and 6-plan directories.
 
 **Path:** `_backlog/`
