@@ -1,0 +1,104 @@
+# Plan: Create Art Switchboard CLI Knowledge
+
+**ID:** `create-art-switchboard-cli-knowledge`
+
+**Status:** `DRAFT`
+
+**Template:** `$DOMAINS/plans/templates/plan.tart`
+
+**Skill:** `write-plan`
+
+**Purpose:** Make the CLI's use cases, architecture, and operating model discoverable to users and contributors.
+
+**Description:** Plan record with 2 iterations, executed within `$ART_SWITCHBOARD`.
+
+## Mandatory Reading
+
+::READ `$DOMAINS/plans/structures/plan.art` (Structure) — Defines the plan structure and nested types.
+
+---
+
+## Path Variables
+
+| Variable                 | Resolved Path                     | Purpose                                            |
+| ------------------------ | --------------------------------- | -------------------------------------------------- |
+| `$WORKSPACE`             | Current working directory         | Workspace root directory                           |
+| `$DOMAINS`               | `$WORKSPACE/.agents/domains`      | Domain resources directory                         |
+| `$ART_BOARDS`            | `$WORKSPACE/checkouts/art-boards` | Art Boards repository                              |
+| `$ART_BOARDS_WHITEBOARD` | `$ART_BOARDS/cli/whiteboard`      | Sibling package knowledge index reference          |
+| `$ART_SWITCHBOARD`       | `$ART_BOARDS/cli/switchboard`     | The Art Switchboard CLI package, and its planning. |
+
+## Summary
+
+Establish the package knowledge base — index, overview, and architecture/use-case references — covering the command surface, the switchboard artefact model, session turn coordination, and the web application direction.
+
+## Context
+
+### Upstream Work
+
+| Kind        | Path                                                                              | Role                                           |
+| ----------- | --------------------------------------------------------------------------------- | ---------------------------------------------- |
+| Milestone   | `$ART_SWITCHBOARD/_roadmap/6-plan/milestone-art-switchboard-cli-one/milestone.md` | Parent milestone; source of the plan outline.  |
+| Parking Lot | `$ART_BOARDS/_roadmap/_parking-lot.md`                                            | Tracks the switchboard CLI milestone proposal. |
+
+### Required Skills
+
+- `write-plan` — Writes execution plans and implementation instructions.
+
+### Knowledge
+
+::READ `$ART_BOARDS/_guide.md` (Guide) — Repository knowledge references and verification. Relevant for Planning Work Item, Verifying Completion.
+
+::READ `$DOMAINS/messages/index.md` (Domain) — Message Board model behind the transport direction. Relevant for Planning Work Item.
+
+Knowledge: Art Whiteboard CLI — `$ART_BOARDS_WHITEBOARD/knowledge/index.md` — sibling package knowledge index to mirror.
+
+## Scope
+
+Package knowledge only — index, overview, architecture/use-case references, and operating guidance. No code and no published site.
+
+## Iterations
+
+| Index | Name                  | Status  |
+| ----- | --------------------- | ------- |
+| 1     | write-index-overview  | `DRAFT` |
+| 2     | document-architecture | `DRAFT` |
+
+### Iteration: 1 — write-index-overview
+
+**Purpose:** `knowledge/index.md` links a concise overview and the architecture/use-case references for the package.
+
+**Status:** `DRAFT`
+
+### Iteration: 2 — document-architecture
+
+**Purpose:** The architecture and operating model are documented — artefact-scoped prompt prepending, external service boundaries, the Domain: Messages transport direction, TUI exclusion, setup, and verification.
+
+**Status:** `DRAFT`
+
+## Work
+
+### Next
+
+- Refine the iterations, then write implementation instructions.
+
+### Blockers
+
+- None.
+
+---
+
+## Coordination
+
+### Not In Scope
+
+- **Repository-level knowledge** — belongs to `$ART_BOARDS/knowledge/index.md`.
+- **Command reference** — expands once the command surface lands in later phases.
+
+### Decisions
+
+- None yet.
+
+### Feedback
+
+- None.

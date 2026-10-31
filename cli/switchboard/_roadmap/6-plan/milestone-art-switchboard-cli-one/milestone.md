@@ -34,7 +34,7 @@
 
 ## Summary
 
-Deliver the first `@art-boards/switchboard-cli`: scaffold and launch the CLI, manage runner sessions, read and monitor switchboards — scope, rules, and arbitrary artefact definitions — coordinate user-managed turns across multiple agent sessions over the same artefacts, provide a web UI, adopt message-board transport from Domain: Messages, and release the application. Phase 1 contains three proposed plans; this milestone draft does not create plan files.
+Deliver the first `@art-boards/switchboard-cli`: scaffold and launch the CLI, manage runner sessions, read and monitor switchboards — scope, rules, and arbitrary artefact definitions — coordinate user-managed turns across multiple agent sessions over the same artefacts, provide a web UI, adopt message-board transport from Domain: Messages, and release the application. Phase 1 holds the three plan files under the package backlog.
 
 ## Scope
 
@@ -178,7 +178,7 @@ Planning and package verification occur from `$ART_BOARDS`; package source and w
 
 **Goal:** Establish a buildable Art Switchboard CLI package, an executable bin using Art Lib's shared CLI infrastructure, and a useful package knowledge base.
 
-**Description:** Scaffold the package, create its bin using Art Lib config/logger/operations/runner capabilities, and create package knowledge. This milestone lists the plan outlines only; no plan files are created yet.
+**Description:** Scaffold the package, create its bin using Art Lib config/logger/operations/runner capabilities, and create package knowledge. The plan files live under `$ART_SWITCHBOARD/_backlog/6-plan/`.
 
 **Status:** `PLANNING`
 
@@ -263,77 +263,21 @@ Planning and package verification occur from `$ART_BOARDS`; package source and w
 
 ## Items:
 
-The following three Phase 1 plans are outlined but do not yet have plan files.
-
-### Plan: Scaffold Art Switchboard CLI
-
-**Phase:** 1 — Hello World
-
-**Status:** `DRAFT`
-
-**Purpose:** Establish the minimum publishable package foundation for `@art-boards/switchboard-cli`.
-
-**Description:** Create the package manifest and build, test, and lint foundation, aligned with the Art Boards workspace and package record.
-
-**Changes:**
-
-- Create the package manifest and package-level build/test configuration.
-- Scaffold source and test directories and package release files.
-- Create the package records (`_records/package.art`) and the package `_roadmap/` and `_backlog/` with their parking lots.
-- Connect package scripts to the repository workspace tooling and verify the package installs and builds.
-
-**Dependencies:**
-
-- None currently identified.
-
-### Plan: Create Art Switchboard CLI Bin
-
-**Phase:** 1 — Hello World
-
-**Status:** `DRAFT`
-
-**Purpose:** Provide the executable command entry point for the first CLI release.
-
-**Description:** Create the `art-switchboard-cli` bin and use Art Lib's config, logger, operations, and runner capabilities; do not add terminal UI.
-
-**Changes:**
-
-- Add the bin entry point, argument/help surface, and executable package metadata.
-- Load configuration, initialize logging and operation tracking, and run through Art Lib's runner lifecycle.
-- Handle clean shutdown and provide a smoke test for the command entry point.
-
-**Dependencies:**
-
-- Confirm Art Lib's config, logger, operations, and runner package APIs/versions during plan creation.
-
-### Plan: Create Art Switchboard CLI Knowledge
-
-**Phase:** 1 — Hello World
-
-**Status:** `DRAFT`
-
-**Purpose:** Make the CLI's use cases, architecture, and operating model discoverable to users and contributors.
-
-**Description:** Establish the initial package knowledge base for the command, the switchboard artefact model, session turn coordination, and the web application direction.
-
-**Changes:**
-
-- Populate `knowledge/index.md` and add a concise overview and architecture/use-case references.
-- Document the artefact-scope prompt prepending model, the Art Agents boundary, Art Lib/Art JS dependencies, the Domain: Messages transport direction, TUI exclusion, setup, and verification.
-
-**Dependencies:**
-
-- None currently identified.
+| Phase | Resource / Record                                                                                                               | Status  |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| 1     | Plan: Scaffold Art Switchboard CLI `$ART_SWITCHBOARD/_backlog/6-plan/plan-scaffold-art-switchboard-cli/plan.md`                 | `DRAFT` |
+| 1     | Plan: Create Art Switchboard CLI Bin `$ART_SWITCHBOARD/_backlog/6-plan/plan-create-art-switchboard-cli-bin/plan.md`             | `DRAFT` |
+| 1     | Plan: Create Art Switchboard CLI Knowledge `$ART_SWITCHBOARD/_backlog/6-plan/plan-create-art-switchboard-cli-knowledge/plan.md` | `DRAFT` |
 
 ## Work
 
 ### Next
 
-Create and refine only the three Phase 1 plans from the outlines above; keep later phases at high-level delivery descriptions until their planning begins.
+Plan the drafted iterations and write implementation instructions for the Phase 1 plans, then delegate; keep later phases at high-level delivery descriptions until their planning begins.
 
 ### Blockers
 
-- None currently block drafting the Phase 1 plans. Confirm Art Lib package APIs/versions before finalizing the bin plan.
+- None currently block refining the Phase 1 plans. Confirm Art Lib package APIs/versions before planning the bin plan's runtime iteration.
 
 ---
 
@@ -395,7 +339,7 @@ npm run ci
 
 ### Decisions
 
-- **Phase 1 has three plans only** — scaffold, CLI bin, and package knowledge; no plan files are created by this milestone draft.
+- **Phase 1 has three plans only** — scaffold, CLI bin, and package knowledge; the plan files live in the package backlog.
 - **Art Agents owns session services** — connection and session management are consumed from Project: Art Agents when available, never re-implemented.
 - **No TUI** — the user interface in this milestone is a web application.
 - **Records substrate** — use `@art-js/records` and the filesystem records layer in Switchboard Management; do not add a bespoke parser/writer.
