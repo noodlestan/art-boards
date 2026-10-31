@@ -70,21 +70,30 @@ Executable entry point and its runtime foundation — bin metadata, argument/hel
 
 **Purpose:** `art-switchboard-cli` is declared as the package bin and renders its argument and help surface.
 
-**Description:** Add the executable entry point and package metadata, keeping the command surface free of switchboard behavior.
+**Description:** Add the manifest `bin` mapping and the executable entry module, keeping the command surface free of switchboard behavior.
 
 **Instructions Mode:** `INSTRUCTIONS_SELF_CONTAINED_FILE`
 
 **Changes:**
 
-- Declare the `art-switchboard-cli` bin in the package manifest.
-- Add the executable entry point with the argument and help surface.
+- Add the `bin` mapping for `art-switchboard-cli` to `package.json`.
+- Create the executable entry module with argument parsing and the help and version surface.
 - Keep the command surface free of switchboard and session behavior.
 
 #### Commits:
 
 | ID                    | Repository / Checkout / Branch           | Policy   | Hash  | Status        |
 | --------------------- | ---------------------------------------- | -------- | ----- | ------------- |
+| `declare-cli-bin`     | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
 | `add-switchboard-bin` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
+
+##### Commit: `declare-cli-bin`
+
+**Repository:** Art Boards
+
+**Message:**
+
+scaffold(switchboard-cli): Declare the `art-switchboard-cli` bin in the package manifest.
 
 ##### Commit: `add-switchboard-bin`
 
@@ -108,9 +117,10 @@ scaffold(switchboard-cli): Add the `art-switchboard-cli` bin entry and help surf
 
 **Changes:**
 
-- Load configuration through `@art-lib/config` at startup.
-- Initialize logging and operation tracking through Art Lib.
-- Run commands through Art Lib's runner lifecycle and handle clean shutdown.
+- Load configuration through `@art-lib/config` before any command executes.
+- Initialize logging and operation tracking through `@art-lib/logger` and `@art-lib/operations`.
+- Run commands through Art Lib's runner lifecycle.
+- Handle clean shutdown on command completion and on interruption.
 
 **Dependencies:**
 
@@ -118,9 +128,10 @@ scaffold(switchboard-cli): Add the `art-switchboard-cli` bin entry and help surf
 
 #### Commits:
 
-| ID                     | Repository / Checkout / Branch           | Policy   | Hash  | Status        |
-| ---------------------- | ---------------------------------------- | -------- | ----- | ------------- |
-| `wire-art-lib-runtime` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
+| ID                      | Repository / Checkout / Branch           | Policy   | Hash  | Status        |
+| ----------------------- | ---------------------------------------- | -------- | ----- | ------------- |
+| `wire-art-lib-runtime`  | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
+| `handle-clean-shutdown` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
 
 ##### Commit: `wire-art-lib-runtime`
 
@@ -129,6 +140,14 @@ scaffold(switchboard-cli): Add the `art-switchboard-cli` bin entry and help surf
 **Message:**
 
 build(switchboard-cli): Wire config, logging, and runner lifecycle into the bin.
+
+##### Commit: `handle-clean-shutdown`
+
+**Repository:** Art Boards
+
+**Message:**
+
+build(switchboard-cli): Handle clean shutdown in the CLI runtime.
 
 ### Iteration: 3 — smoke-test-bin
 
@@ -145,6 +164,7 @@ build(switchboard-cli): Wire config, logging, and runner lifecycle into the bin.
 **Changes:**
 
 - Add a smoke test exercising `--help` and `--version` through the entry point.
+- Assert clean exit and rendered help output.
 - Run the smoke test with the package test suite and the repository CI.
 
 #### Commits:

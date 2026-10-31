@@ -72,20 +72,22 @@ Package knowledge only — index, overview, architecture/use-case references, an
 
 **Purpose:** `knowledge/index.md` links a concise overview and the architecture/use-case references for the package.
 
-**Description:** Create the knowledge index and the package overview that orients users and contributors.
+**Description:** Create the knowledge index with its documents table and the overview that orients users and contributors.
 
 **Instructions Mode:** `INSTRUCTIONS_INLINED_IN_ITERATION`
 
 **Changes:**
 
-- Create `knowledge/index.md` linking the package resources.
-- Write the package overview covering purpose and audience.
+- Create `knowledge/index.md` with a documents table linking the package resources.
+- Write the package overview — purpose, audience, and where to start.
+- Point setup and verification at the repository guide.
 
 #### Commits:
 
-| ID                      | Repository / Checkout / Branch           | Policy   | Hash  | Status        |
-| ----------------------- | ---------------------------------------- | -------- | ----- | ------------- |
-| `write-knowledge-index` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
+| ID                       | Repository / Checkout / Branch           | Policy   | Hash  | Status        |
+| ------------------------ | ---------------------------------------- | -------- | ----- | ------------- |
+| `write-knowledge-index`  | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
+| `write-package-overview` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
 
 ##### Commit: `write-knowledge-index`
 
@@ -93,7 +95,15 @@ Package knowledge only — index, overview, architecture/use-case references, an
 
 **Message:**
 
-docs(switchboard-cli): Write the package knowledge index and overview.
+docs(switchboard-cli): Write the package knowledge index.
+
+##### Commit: `write-package-overview`
+
+**Repository:** Art Boards
+
+**Message:**
+
+docs(switchboard-cli): Write the package overview.
 
 ### Iteration: 2 — document-architecture
 
@@ -109,16 +119,17 @@ docs(switchboard-cli): Write the package knowledge index and overview.
 
 **Changes:**
 
-- Document the architecture — CLI process, WebSocket connection, and the SolidJS application served by the CLI.
+- Write the architecture document — CLI process, WebSocket connection, and the SolidJS application served by the CLI.
 - Document artefact-scoped prompt prepending and the session turn model.
-- Document the service boundaries — Art Lib, Art JS, and Art Agents — and the Domain: Messages transport direction.
 - Record the TUI exclusion, setup, and verification.
+- Document the service boundaries — Art Lib, Art JS, and Art Agents — and the Domain: Messages transport direction.
 
 #### Commits:
 
 | ID                                  | Repository / Checkout / Branch           | Policy   | Hash  | Status        |
 | ----------------------------------- | ---------------------------------------- | -------- | ----- | ------------- |
 | `document-switchboard-architecture` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
+| `document-service-boundaries`       | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
 
 ##### Commit: `document-switchboard-architecture`
 
@@ -127,6 +138,14 @@ docs(switchboard-cli): Write the package knowledge index and overview.
 **Message:**
 
 docs(switchboard-cli): Document the switchboard architecture and operating model.
+
+##### Commit: `document-service-boundaries`
+
+**Repository:** Art Boards
+
+**Message:**
+
+docs(switchboard-cli): Document the service boundaries and message transport.
 
 ## Work
 
