@@ -12,7 +12,7 @@
 
 **Purpose:** Deliver the first releasable `@art-boards/relayboard-cli` for coordinating multi-agent collaboration sessions over arbitrary artefact sets — plans, instructions, attachments — through a web application.
 
-**Description:** Seven phases establish the CLI baseline, session management, relayboard and artefact management, a web UI and its interactions, message-board transport, and a first public release. TUI is explicitly out of scope.
+**Description:** Six phases establish the CLI baseline, session management, relayboard and artefact management, a web UI and its interactions, and a first public release. TUI is explicitly out of scope.
 
 ## Mandatory Reading
 
@@ -34,7 +34,7 @@
 
 ## Summary
 
-Deliver the first `@art-boards/relayboard-cli`: scaffold and launch the CLI, manage runner sessions, read and monitor relayboards — scope, rules, and arbitrary artefact definitions — coordinate user-managed turns across multiple agent sessions over the same artefacts, provide a web UI, adopt message-board transport from Domain: Messages, and release the application. Phase 1 holds the three plan files under the package backlog.
+Deliver the first `@art-boards/relayboard-cli`: scaffold and launch the CLI, manage runner sessions, read and monitor relayboards — scope, rules, and arbitrary artefact definitions — coordinate user-managed turns across multiple agent sessions over the same artefacts, provide a web UI, and release the application. Phase 1 holds the three plan files under the package backlog.
 
 ## Scope
 
@@ -133,6 +133,7 @@ Planning and package verification occur from `$ART_BOARDS`; package source and w
 - Milestone: Art Whiteboard CLI One — `$ART_WHITEBOARD/_roadmap/6-plan/milestone-art-whiteboard-cli-one/milestone.md`
 - Whiteboard: Art Whiteboard CLI Inception — `$ART_WHITEBOARD/_roadmap/whiteboard-art-boards-inception/whiteboard.md`
 - Research: Agent Session Management — `$ART_WHITEBOARD/_roadmap/whiteboard-art-boards-inception/agent-sessions__research.md`
+- Milestone: Relayboard POCs — `$ART_RELAYBOARD/_roadmap/6-plan/milestone-relayboard-pocs/milestone.md` — research evidence for Phases 2–5.
 
 ## Required Skills
 
@@ -147,7 +148,6 @@ Planning and package verification occur from `$ART_BOARDS`; package source and w
 - Roadmaps — `$DOMAINS/roadmaps/index.md`
 - Milestones — `$DOMAINS/milestones/index.md`
 - Plans — `$DOMAINS/plans/index.md`
-- Messages — `$DOMAINS/messages/index.md`
 - Deployments — `$DOMAINS/deployments/index.md`
 - Work — `$DOMAINS/work/index.md`
 
@@ -158,7 +158,6 @@ Planning and package verification occur from `$ART_BOARDS`; package source and w
 - Package — `$DOMAINS/packages/structures/package.art`
 - Milestone — `$DOMAINS/milestones/structures/milestone.art`
 - Plan — `$DOMAINS/plans/structures/plan.art`
-- Message Board — `$DOMAINS/messages/structures/message-board.art`
 
 ## Workflows
 
@@ -173,21 +172,19 @@ Planning and package verification occur from `$ART_BOARDS`; package source and w
 - Guide: Art Boards — `$ART_BOARDS/_guide.md` — repository setup and verification.
 - Guide: Art Whiteboard CLI — `$ART_WHITEBOARD/_guide.md` — sibling CLI package layout to mirror.
 - Research: Agent Session Management — `$ART_WHITEBOARD/_roadmap/whiteboard-art-boards-inception/agent-sessions__research.md` — runner capabilities, boundaries, and verification questions.
-- Domain: Messages — `$DOMAINS/messages/index.md` — Message Board structure and message routines used by Phase 6.
 
 ---
 
 ## Phases
 
-| Index | Name                    | Status     |
-| ----- | ----------------------- | ---------- |
-| 1     | Hello World             | `PLANNING` |
-| 2     | Session Management      | `DRAFT`    |
-| 3     | Relayboard Management   | `DRAFT`    |
-| 4     | Web UI MVP              | `DRAFT`    |
-| 5     | Web UI Interactions     | `DRAFT`    |
-| 6     | Message Board Transport | `DRAFT`    |
-| 7     | First Release           | `DRAFT`    |
+| Index | Name                  | Status     |
+| ----- | --------------------- | ---------- |
+| 1     | Hello World           | `PLANNING` |
+| 2     | Session Management    | `DRAFT`    |
+| 3     | Relayboard Management | `DRAFT`    |
+| 4     | Web UI MVP            | `DRAFT`    |
+| 5     | Web UI Interactions   | `DRAFT`    |
+| 6     | First Release         | `DRAFT`    |
 
 ### Phase: 1 — Hello World
 
@@ -250,23 +247,11 @@ Planning and package verification occur from `$ART_BOARDS`; package source and w
 
 - None identified beyond session-management operations and the web UI established by earlier phases.
 
-### Phase: 6 — Message Board Transport
-
-**Goal:** Let collaboration messages flow through a message board artefact instead of direct session relays.
-
-**Description:** Let the UI create and manage a message board artefact modelled by Domain: Messages (Structure: Message Board), switch communication to or through the message board, and prepend a `re-read` instruction to the next prompt when unread board messages exist; keep direct session relays available as an alternative transport.
-
-**Status:** `DRAFT`
-
-**Dependencies:**
-
-- Structure: Message Board and the message routines of Domain: Messages consumed as-is; no domain changes expected.
-
-### Phase: 7 — First Release
+### Phase: 6 — First Release
 
 **Goal:** Publish a verified first releasable Art Relayboard CLI.
 
-**Description:** Complete integration testing with checked-in filesystem fixtures and a mock runner server, verifying unsupported operations, errors, interruption, and shutdown; then verify the end-to-end multi-session turn flow over shared artefacts — prompt prepending, direct relays, and message-board transport — plus package and web application builds, supported runner behavior, clean shutdown, and release documentation; publish the CLI package and update its deployment record.
+**Description:** Complete integration testing with checked-in filesystem fixtures and a mock runner server, verifying unsupported operations, errors, interruption, and shutdown; then verify the end-to-end multi-session turn flow over shared artefacts — prompt prepending and direct relays — plus package and web application builds, supported runner behavior, clean shutdown, and release documentation; publish the CLI package and update its deployment record.
 
 **Status:** `DRAFT`
 
@@ -332,15 +317,15 @@ npm run ci
 - **Terminal UI (TUI)** — the user interface in this milestone is browser-based, matching Milestone: Art Whiteboard CLI One.
 - **Whiteboard participant monitoring** — the fixed whiteboard record and its participant/sentiment model stay owned by the Art Whiteboard CLI; relayboards are arbitrary artefact sets.
 - **Session-service extraction** — extracting connection and session management to Project: Art Agents belongs to Milestone: Art Whiteboard CLI One; this milestone consumes the result.
-- **Detailed plans for Phases 2–7** — those phases remain high-level; create their plans as the milestone advances.
+- **Detailed plans for Phases 2–6** — those phases remain high-level; create their plans as the milestone advances.
 - **Relayboard-specific records parsing** — use the Art JS records and filesystem records packages.
+- **Message-board transport** — out of scope; collaboration travels as session messages only, and the responsibility is switch/relay.
 
 ### Evidence
 
 - **CLI package builds** and exposes the `art-relayboard-cli` executable.
 - **Artefact-scoped prompts** — a newly started session receives the relayboard scope, rules, and artefact definitions prepended to its first prompt.
 - **Managed turns** — a user continues with the planning agent or starts/attaches a reviewer session, and a cross-session update reaches the target session.
-- **Message-board transport** — a message board artefact can be created and used, with `re-read` prepended to the next prompt.
 - **Web UI** displays the relayboard artefacts, sessions, current turn, and changes, with supported session interactions.
 - **Robustness** — invalid relayboards, unavailable sessions, and no-action states cause no unintended artefact changes or duplicate prompts.
 - **Tests** — unit tests cover core logic; integration tests run against checked-in filesystem fixtures and a mock runner server; unsupported operations, errors, interruption, and shutdown are verified.
@@ -349,7 +334,6 @@ npm run ci
 ### Findings
 
 - **Runner capabilities differ** — live attachment, persisted-session resumption, and terminal handoff are distinct capabilities and must be verified per adapter.
-- **Message channels differ** — direct session prompts and the Message Board are distinct transports; the relayboard routes collaboration over either.
 - **Artefacts are arbitrary** — the relayboard references artefact paths and definitions; it must not parse or interpret artefact contents.
 
 ### Decisions
@@ -359,12 +343,10 @@ npm run ci
 - **No TUI** — the user interface in this milestone is a web application.
 - **Records substrate** — use `@art-js/records` and the filesystem records layer in Relayboard Management; do not add a bespoke parser/writer.
 - **Prompt prepending** — scope, rules, and artefact definitions are prepended to the first prompt of a new session, not injected into artefact contents.
-- **Message board is additive** — Domain: Messages transport is adopted later (Phase 6) without removing direct session relays.
 
 ### Knowledge to Update
 
 - `$ART_RELAYBOARD/knowledge/index.md` — link the CLI overview and architecture/use-case resources produced by the Phase 1 knowledge plan.
-- `$ART_BOARDS/_guide.md` — list `cli/relayboard` under Repository Layout, Knowledge References, and the hosted roadmaps/backlogs, reconciling the existing `cli/board/` entries.
 - `$ART_BOARDS/_roadmap/_parking-lot.md` — remove the POC milestone item once this milestone advances beyond `DRAFT`.
 
 ### Follow Ups
