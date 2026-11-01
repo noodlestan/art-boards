@@ -2,7 +2,7 @@
 
 **ID:** `create-art-switchboard-cli-knowledge`
 
-**Status:** `WORKING`
+**Status:** `DONE`
 
 **Template:** `$DOMAINS/plans/templates/plan.tart`
 
@@ -59,10 +59,10 @@ Package knowledge only — index, overview, architecture/use-case references, an
 
 ## Iterations
 
-| Index | Name                  | Status  |
-| ----- | --------------------- | ------- |
-| 1     | write-index-overview  | `DONE`  |
-| 2     | document-architecture | `READY` |
+| Index | Name                  | Status |
+| ----- | --------------------- | ------ |
+| 1     | write-index-overview  | `DONE` |
+| 2     | document-architecture | `DONE` |
 
 ### Iteration: 1 — write-index-overview
 
@@ -133,7 +133,7 @@ docs(switchboard-cli): Write the package overview.
 
 **Id:** `document-architecture`
 
-**Status:** `READY`
+**Status:** `DONE`
 
 **Purpose:** The architecture and operating model are documented — artefact-scoped prompt prepending, external service boundaries, the Domain: Messages transport direction, TUI exclusion, setup, and verification.
 
@@ -181,10 +181,10 @@ After executing:
 
 #### Commits:
 
-| ID                                  | Repository / Checkout / Branch           | Policy   | Hash  | Status     |
-| ----------------------------------- | ---------------------------------------- | -------- | ----- | ---------- |
-| `document-switchboard-architecture` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `AUTHORED` |
-| `document-service-boundaries`       | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `AUTHORED` |
+| ID                                  | Repository / Checkout / Branch           | Policy   | Hash      | Status      |
+| ----------------------------------- | ---------------------------------------- | -------- | --------- | ----------- |
+| `document-switchboard-architecture` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | `6a1ce07` | `COMMITTED` |
+| `document-service-boundaries`       | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | `5adf66f` | `COMMITTED` |
 
 ##### Commit: `document-switchboard-architecture`
 
@@ -206,7 +206,7 @@ docs(switchboard-cli): Document the service boundaries and message transport.
 
 ### Next
 
-- Delegate the READY iterations.
+- Both iterations are DONE; reflect the outcomes upstream into Milestone: Art Switchboard CLI One.
 
 ### Blockers
 
@@ -224,6 +224,7 @@ docs(switchboard-cli): Document the service boundaries and message transport.
 ### Evidence
 
 - `knowledge/index.md` and `knowledge/overview.md` created; every document linked from the index; `npm run lint` green; commits `b125e97`, `086dba0` local under `NOPUSH`.
+- `knowledge/architecture.md` and `knowledge/boundaries.md` created; index links all documents; `npm run ci` green; commits `6a1ce07`, `5adf66f` local under `NOPUSH`.
 
 ### Findings
 
