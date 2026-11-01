@@ -1,0 +1,65 @@
+# Module
+
+## Package: Art Switchboard CLI
+
+**Purpose:** Coordinate multi-agent collaboration sessions over arbitrary artefacts.
+
+**Description:** CLI package that starts and attaches agent sessions over a switchboard record; contains the command surface, switchboard management, and turn coordination modules.
+
+**Owner:** Project: Art Boards
+
+**Namespace:** Namespace: Art Boards
+
+**Author:** Noodlestan Collective
+
+**Path:** `cli/switchboard`
+
+**Canonical Name:** `@art-boards/switchboard-cli`
+
+**Published:** `false`
+
+**Private:** `false`
+
+**Keywords:**
+
+- cli
+- switchboards
+- art
+- agent-workflows
+- delegation
+- agent-visualization
+
+**Files:**
+
+- `dist`
+- `LICENSE-MIT`
+- `README.md`
+
+**Language:** TypeScript
+
+**Bin:**
+
+- `art-switchboard-cli`: `./dist/index.mjs`
+
+**Engines:**
+
+- Node: `>=22`
+
+**PackageManager:** `npm@10.2.3`
+
+**PackageFile:** `package.json`
+
+**Dependencies:**
+
+- Runtime:
+  - TBD — Art Lib CLI infrastructure packages (commander wrapper, config, logger, operations); PLANNED with the Art Lib plan.
+
+- Dev:
+  - Package Dependency Set: CLI Development
+
+**Scaffolders:**
+
+- Scaffolder Skeleton: CLI Package
+- Scaffolder Skeleton: Package Common
+
+**License:** License: Noodlestan 2026 MIT
