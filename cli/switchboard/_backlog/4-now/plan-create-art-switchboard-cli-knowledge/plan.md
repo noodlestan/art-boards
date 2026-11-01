@@ -2,7 +2,7 @@
 
 **ID:** `create-art-switchboard-cli-knowledge`
 
-**Status:** `PLANNING`
+**Status:** `WORKING`
 
 **Template:** `$DOMAINS/plans/templates/plan.tart`
 
@@ -61,14 +61,14 @@ Package knowledge only — index, overview, architecture/use-case references, an
 
 | Index | Name                  | Status  |
 | ----- | --------------------- | ------- |
-| 1     | write-index-overview  | `READY` |
+| 1     | write-index-overview  | `DONE`  |
 | 2     | document-architecture | `READY` |
 
 ### Iteration: 1 — write-index-overview
 
 **Id:** `write-index-overview`
 
-**Status:** `READY`
+**Status:** `DONE`
 
 **Purpose:** `knowledge/index.md` links a concise overview and the architecture/use-case references for the package.
 
@@ -108,10 +108,10 @@ After executing:
 
 #### Commits:
 
-| ID                       | Repository / Checkout / Branch           | Policy   | Hash  | Status     |
-| ------------------------ | ---------------------------------------- | -------- | ----- | ---------- |
-| `write-knowledge-index`  | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `AUTHORED` |
-| `write-package-overview` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `AUTHORED` |
+| ID                       | Repository / Checkout / Branch           | Policy   | Hash      | Status      |
+| ------------------------ | ---------------------------------------- | -------- | --------- | ----------- |
+| `write-knowledge-index`  | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | `b125e97` | `COMMITTED` |
+| `write-package-overview` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | `086dba0` | `COMMITTED` |
 
 ##### Commit: `write-knowledge-index`
 
@@ -221,9 +221,25 @@ docs(switchboard-cli): Document the service boundaries and message transport.
 - **Repository-level knowledge** — belongs to `$ART_BOARDS/knowledge/index.md`.
 - **Command reference** — expands once the command surface lands in later phases.
 
+### Evidence
+
+- `knowledge/index.md` and `knowledge/overview.md` created; every document linked from the index; `npm run lint` green; commits `b125e97`, `086dba0` local under `NOPUSH`.
+
+### Findings
+
+- None yet.
+
 ### Decisions
 
 - None yet.
+
+### Knowledge to Update
+
+- None yet.
+
+### Follow Ups
+
+- None.
 
 ### Feedback
 
