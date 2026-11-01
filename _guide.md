@@ -22,6 +22,7 @@ _records/        — project, repository, and namespace records
 knowledge/       — repository-level knowledge documentation
 cli/             — CLI packages; each owns its _roadmap/ and _backlog/
 cli/whiteboard   — `@art-boards/whiteboard-cli`, plus _roadmap/ and _backlog/
+cli/relayboard   — `@art-boards/relayboard-cli`, plus _roadmap/ and _backlog/
 ```
 
 ## Records Management
@@ -38,6 +39,7 @@ This repository maintains knowledge references at:
 
 - `knowledge/index.md` — Repository-level knowledge.
 - `cli/whiteboard/knowledge/index.md` — Art Whiteboard CLI.
+- `cli/relayboard/knowledge/index.md` — Art Relayboard CLI.
 
 ## Conventions
 
@@ -73,7 +75,8 @@ This repository maintains one repository level roadmap:
 
 This repository hosts also roadmaps for:
 
-- `cli/board/`
+- `cli/whiteboard/`
+- `cli/relayboard/`
 
 ### Planning Work
 
@@ -84,7 +87,8 @@ This repository maintains one repository level backlog:
 
 This repository hosts also backlogs for:
 
-- `cli/board/`
+- `cli/whiteboard/`
+- `cli/relayboard/`
 
 ## Operating Instructions
 
