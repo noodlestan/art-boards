@@ -280,15 +280,15 @@ Planning and package verification occur from `$ART_BOARDS`; package source and w
 
 | Phase | Resource / Record                                                                                                              | Status     |
 | ----- | ------------------------------------------------------------------------------------------------------------------------------ | ---------- |
-| 1     | Plan: Scaffold Art Switchboard CLI `$ART_SWITCHBOARD/_backlog/4-now/plan-scaffold-art-switchboard-cli/plan.md`                 | `PLANNING` |
+| 1     | Plan: Scaffold Art Switchboard CLI `$ART_SWITCHBOARD/_backlog/4-now/plan-scaffold-art-switchboard-cli/plan.md`                 | `DONE`     |
 | 1     | Plan: Create Art Switchboard CLI Bin `$ART_SWITCHBOARD/_backlog/4-now/plan-create-art-switchboard-cli-bin/plan.md`             | `PLANNING` |
-| 1     | Plan: Create Art Switchboard CLI Knowledge `$ART_SWITCHBOARD/_backlog/4-now/plan-create-art-switchboard-cli-knowledge/plan.md` | `PLANNING` |
+| 1     | Plan: Create Art Switchboard CLI Knowledge `$ART_SWITCHBOARD/_backlog/4-now/plan-create-art-switchboard-cli-knowledge/plan.md` | `DONE`     |
 
 ## Work
 
 ### Next
 
-Plan the drafted iterations and write implementation instructions for the Phase 1 plans, then delegate; keep later phases at high-level delivery descriptions until their planning begins.
+Complete the bin plan — confirm the Art Lib APIs, write its remaining instructions, and delegate — then reflect Phase 1 outcomes; keep later phases at high-level delivery descriptions until their planning begins.
 
 ### Blockers
 
