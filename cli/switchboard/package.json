@@ -25,5 +25,11 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/noodlestan/art-boards.git"
+  },
+  "scripts": {
+    "build": "esbuild-cli",
+    "test": "vitest run",
+    "lint": "prettier . -c",
+    "ci": "npm run lint && npm run test && npm run build"
   }
 }
