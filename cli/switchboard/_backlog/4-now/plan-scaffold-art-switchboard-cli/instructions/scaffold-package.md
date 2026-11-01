@@ -59,6 +59,8 @@ Note: the sibling package is **not scaffolded yet** — it has records, guides, 
 
 ## Operating Instructions
 
+**Source:** Setting Up and Verifying Completion from `$ART_BOARDS/_guide.md`; Writing Commit Message from `$WORKSPACE/knowledge/conventions/writing-commit-message.art`.
+
 ### Setting Up
 
 **Purpose:** Prepare the repository environment.

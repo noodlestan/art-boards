@@ -2,7 +2,7 @@
 
 **ID:** `scaffold-art-switchboard-cli`
 
-**Status:** `PLANNING`
+**Status:** `WORKING`
 
 **Template:** `$DOMAINS/plans/templates/plan.tart`
 
@@ -59,14 +59,14 @@ Package skeleton only — manifest, build/test/lint configuration, source and te
 
 | Index | Name                  | Status  |
 | ----- | --------------------- | ------- |
-| 1     | scaffold-package      | `READY` |
+| 1     | scaffold-package      | `DONE`  |
 | 2     | create-package-record | `READY` |
 
 ### Iteration: 1 — scaffold-package
 
 **Id:** `scaffold-package`
 
-**Status:** `READY`
+**Status:** `DONE`
 
 **Purpose:** The package installs, builds, tests, and lints locally through the repository workspace tooling on the `@noodlestan/*` toolchain.
 
@@ -75,6 +75,8 @@ Package skeleton only — manifest, build/test/lint configuration, source and te
 **Instructions Mode:** `INSTRUCTIONS_SELF_CONTAINED_FILE`
 
 **Instructions:** `./instructions/scaffold-package.md`
+
+**Report:** `./instructions/scaffold-package__report.md`
 
 **Changes:**
 
@@ -87,12 +89,12 @@ Package skeleton only — manifest, build/test/lint configuration, source and te
 
 #### Commits:
 
-| ID                              | Repository / Checkout / Branch           | Policy   | Hash  | Status     |
-| ------------------------------- | ---------------------------------------- | -------- | ----- | ---------- |
-| `scaffold-package-foundation`   | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `AUTHORED` |
-| `scaffold-source-test-skeleton` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `AUTHORED` |
-| `add-package-release-files`     | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `AUTHORED` |
-| `wire-workspace-tooling`        | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `AUTHORED` |
+| ID                              | Repository / Checkout / Branch           | Policy   | Hash      | Status      |
+| ------------------------------- | ---------------------------------------- | -------- | --------- | ----------- |
+| `scaffold-package-foundation`   | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | `b52d3e0` | `COMMITTED` |
+| `scaffold-source-test-skeleton` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | `c8a9ab3` | `COMMITTED` |
+| `add-package-release-files`     | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | `11d68a0` | `COMMITTED` |
+| `wire-workspace-tooling`        | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | `ee6a40e` | `COMMITTED` |
 
 ##### Commit: `scaffold-package-foundation`
 
@@ -210,9 +212,26 @@ records(switchboard-cli): Record the Art Switchboard CLI package and its bin.
 - **Command surface** — the `art-switchboard-cli` bin lands in Plan: Create Art Switchboard CLI Bin.
 - **npm publish** — releasing lands under the milestone's First Release phase; the `@art-boards` scope is already claimed by `@art-boards/whiteboard-cli@0.0.1`.
 
+### Evidence
+
+- `npm run lint` and `npm run ci` pass from `$ART_BOARDS`; `turbo run ci` builds `dist/index.mjs` and runs 1/1 tests.
+- Commits `b52d3e0`, `c8a9ab3`, `11d68a0`, `ee6a40e` created locally under policy `NOPUSH`; lefthook pre-commit green on all four.
+
+### Findings
+
+- Package-scope `prettier . -c` does not inherit the root `.prettierignore` — the package carries its own `.prettierignore` for `dist/` and `coverage/`.
+
 ### Decisions
 
 - **Layout mirrors the sibling; toolchain comes from the repository root** — the Art Whiteboard CLI package is not scaffolded yet, so configurations extend the `@noodlestan/*` root tooling instead of copying sibling files.
+
+### Knowledge to Update
+
+- `$ART_BOARDS/_guide.md` — add `cli/switchboard` to the repository layout when the guide is next updated.
+
+### Follow Ups
+
+- None.
 
 ### Feedback
 
