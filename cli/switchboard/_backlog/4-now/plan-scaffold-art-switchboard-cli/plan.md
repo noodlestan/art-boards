@@ -57,27 +57,29 @@ Package skeleton only — manifest, build/test/lint configuration, source and te
 
 ## Iterations
 
-| Index | Name                  | Status     |
-| ----- | --------------------- | ---------- |
-| 1     | scaffold-package      | `PLANNING` |
-| 2     | create-package-record | `PLANNING` |
+| Index | Name                  | Status  |
+| ----- | --------------------- | ------- |
+| 1     | scaffold-package      | `READY` |
+| 2     | create-package-record | `READY` |
 
 ### Iteration: 1 — scaffold-package
 
 **Id:** `scaffold-package`
 
-**Status:** `PLANNING`
+**Status:** `READY`
 
-**Purpose:** The package installs, builds, tests, and lints locally through the repository workspace tooling, mirroring the sibling CLI package.
+**Purpose:** The package installs, builds, tests, and lints locally through the repository workspace tooling on the `@noodlestan/*` toolchain.
 
 **Description:** Create the manifest and toolchain configuration, scaffold source, test, and release files, and connect the package scripts to the repository workspace tooling.
 
 **Instructions Mode:** `INSTRUCTIONS_SELF_CONTAINED_FILE`
 
+**Instructions:** `./instructions/scaffold-package.md`
+
 **Changes:**
 
 - Create `package.json` with the package identity, scripts, and workspace linkage — no `bin` yet.
-- Add TypeScript and build configuration mirroring `$ART_BOARDS_WHITEBOARD`.
+- Add TypeScript and build configuration extending the `@noodlestan/tsconfig` and `@noodlestan/esbuild` root tooling.
 - Add test and lint configuration wired to the repository conventions.
 - Scaffold `src/` and `test/` with placeholder modules.
 - Add the package release files — `README.md` and `LICENSE-MIT`.
@@ -85,12 +87,12 @@ Package skeleton only — manifest, build/test/lint configuration, source and te
 
 #### Commits:
 
-| ID                              | Repository / Checkout / Branch           | Policy   | Hash  | Status        |
-| ------------------------------- | ---------------------------------------- | -------- | ----- | ------------- |
-| `scaffold-package-foundation`   | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
-| `scaffold-source-test-skeleton` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
-| `add-package-release-files`     | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
-| `wire-workspace-tooling`        | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
+| ID                              | Repository / Checkout / Branch           | Policy   | Hash  | Status     |
+| ------------------------------- | ---------------------------------------- | -------- | ----- | ---------- |
+| `scaffold-package-foundation`   | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `AUTHORED` |
+| `scaffold-source-test-skeleton` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `AUTHORED` |
+| `add-package-release-files`     | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `AUTHORED` |
+| `wire-workspace-tooling`        | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `AUTHORED` |
 
 ##### Commit: `scaffold-package-foundation`
 
@@ -128,13 +130,42 @@ build(switchboard-cli): Connect package scripts to the repository workspace tool
 
 **Id:** `create-package-record`
 
-**Status:** `PLANNING`
+**Status:** `READY`
 
 **Purpose:** `_records/package.art` records `@art-boards/switchboard-cli` at `cli/switchboard` with its `art-switchboard-cli` bin.
 
 **Description:** Create the package record from the package identity, consistent with `package.json`, and keep it unpublished until the first release.
 
 **Instructions Mode:** `INSTRUCTIONS_INLINED_IN_ITERATION`
+
+**Instructions:**
+
+Execute the Changes listed above.
+
+Before starting:
+
+- ::READ `$ART_BOARDS_WHITEBOARD/_records/package.art` — mirror this record's structure for the switchboard package.
+- Mirror `package.json` values exactly: `name`, `files`, `engines`, `keywords`, `packageManager`.
+- Omit the `Deployment:` field — the npm deployment record is created by the First Release phase.
+
+Use these values:
+
+- `Purpose`: Coordinate multi-agent collaboration sessions over arbitrary artefacts.
+- `Description`: CLI package that starts and attaches agent sessions over a switchboard record; contains the command surface, switchboard management, and turn coordination modules.
+- `Canonical Name`: `@art-boards/switchboard-cli` · `Path`: `cli/switchboard` · `Bin`: `art-switchboard-cli`: `./dist/index.mjs`.
+- `Published`: `false` · `Private`: `false` · `License`: License: Noodlestan 2026 MIT.
+- Runtime dependencies: TBD Art Lib CLI infrastructure packages (commander wrapper, config, logger, operations) — PLANNED with the Art Lib plan.
+- `Scaffolders`: Scaffolder Skeleton: CLI Package, Scaffolder Skeleton: Package Common.
+
+Validate that:
+
+- The record parses and `npm run lint` passes from `$ART_BOARDS`.
+- The record identity matches `package.json`.
+
+After executing:
+
+- Commit `record-switchboard-package` with its blueprint message (policy `NOPUSH` — do not push).
+- Report the outcome in chat — inlined instructions report in chat.
 
 **Changes:**
 
@@ -148,9 +179,9 @@ build(switchboard-cli): Connect package scripts to the repository workspace tool
 
 #### Commits:
 
-| ID                           | Repository / Checkout / Branch           | Policy   | Hash  | Status        |
-| ---------------------------- | ---------------------------------------- | -------- | ----- | ------------- |
-| `record-switchboard-package` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
+| ID                           | Repository / Checkout / Branch           | Policy   | Hash  | Status     |
+| ---------------------------- | ---------------------------------------- | -------- | ----- | ---------- |
+| `record-switchboard-package` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `AUTHORED` |
 
 ##### Commit: `record-switchboard-package`
 
@@ -164,7 +195,7 @@ records(switchboard-cli): Record the Art Switchboard CLI package and its bin.
 
 ### Next
 
-- Write implementation instructions for the iterations, then delegate.
+- Delegate the READY iterations.
 
 ### Blockers
 
@@ -181,7 +212,7 @@ records(switchboard-cli): Record the Art Switchboard CLI package and its bin.
 
 ### Decisions
 
-- **Mirror the sibling package** — layout, scripts, and configuration follow the Art Whiteboard CLI package.
+- **Layout mirrors the sibling; toolchain comes from the repository root** — the Art Whiteboard CLI package is not scaffolded yet, so configurations extend the `@noodlestan/*` root tooling instead of copying sibling files.
 
 ### Feedback
 

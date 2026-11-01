@@ -59,22 +59,46 @@ Package knowledge only — index, overview, architecture/use-case references, an
 
 ## Iterations
 
-| Index | Name                  | Status     |
-| ----- | --------------------- | ---------- |
-| 1     | write-index-overview  | `PLANNING` |
-| 2     | document-architecture | `PLANNING` |
+| Index | Name                  | Status  |
+| ----- | --------------------- | ------- |
+| 1     | write-index-overview  | `READY` |
+| 2     | document-architecture | `READY` |
 
 ### Iteration: 1 — write-index-overview
 
 **Id:** `write-index-overview`
 
-**Status:** `PLANNING`
+**Status:** `READY`
 
 **Purpose:** `knowledge/index.md` links a concise overview and the architecture/use-case references for the package.
 
 **Description:** Create the knowledge index with its documents table and the overview that orients users and contributors.
 
 **Instructions Mode:** `INSTRUCTIONS_INLINED_IN_ITERATION`
+
+**Instructions:**
+
+Execute the Changes listed above.
+
+Before starting:
+
+- ::READ `$ART_BOARDS/_guide.md` — knowledge references and verification for this repository.
+- Read `$ART_BOARDS_WHITEBOARD/knowledge/index.md` — the sibling documents-table layout.
+- Read `$ART_BOARDS/knowledge/index.md` — repository-level knowledge conventions.
+
+Create `knowledge/index.md` in `$ART_SWITCHBOARD` with a `## Documents` table (Document | Purpose) linking `overview.md` (created in this iteration), `architecture.md`, and `boundaries.md` (created in iteration `document-architecture`).
+
+Write `knowledge/overview.md`: the package purpose, its audience, where to start, setup (`npm ci`), and verification (`npm run lint`, `npm run ci`) — pointers only, no command reference yet.
+
+Validate that:
+
+- Every file in `knowledge/` is linked from `knowledge/index.md`.
+- `npm run lint` passes from `$ART_BOARDS`.
+
+After executing:
+
+- Commit `write-knowledge-index`, then `write-package-overview`, each with its blueprint message (policy `NOPUSH` — do not push).
+- Report the outcome in chat — inlined instructions report in chat.
 
 **Changes:**
 
@@ -84,10 +108,10 @@ Package knowledge only — index, overview, architecture/use-case references, an
 
 #### Commits:
 
-| ID                       | Repository / Checkout / Branch           | Policy   | Hash  | Status        |
-| ------------------------ | ---------------------------------------- | -------- | ----- | ------------- |
-| `write-knowledge-index`  | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
-| `write-package-overview` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
+| ID                       | Repository / Checkout / Branch           | Policy   | Hash  | Status     |
+| ------------------------ | ---------------------------------------- | -------- | ----- | ---------- |
+| `write-knowledge-index`  | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `AUTHORED` |
+| `write-package-overview` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `AUTHORED` |
 
 ##### Commit: `write-knowledge-index`
 
@@ -109,13 +133,44 @@ docs(switchboard-cli): Write the package overview.
 
 **Id:** `document-architecture`
 
-**Status:** `PLANNING`
+**Status:** `READY`
 
 **Purpose:** The architecture and operating model are documented — artefact-scoped prompt prepending, external service boundaries, the Domain: Messages transport direction, TUI exclusion, setup, and verification.
 
 **Description:** Document how the CLI, the switchboard record, the sessions, and the SolidJS application fit together, and how the package is operated.
 
 **Instructions Mode:** `INSTRUCTIONS_INLINED_IN_ITERATION`
+
+**Instructions:**
+
+Execute the Changes listed above.
+
+Before starting:
+
+- ::READ `$DOMAINS/messages/index.md` — the Message Board model behind the transport direction.
+- Read `knowledge/index.md` — keep the documents table in sync with the files you create.
+
+Write `knowledge/architecture.md`:
+
+- The CLI process lifecycle and its WebSocket endpoint.
+- The SolidJS application — runs standalone with `npm run dev` during development, connects over WebSocket to the running CLI, and is served by the CLI once the web UI is delivered.
+- Artefact-scoped prompt prepending (scope, rules, artefacts on the first prompt of a new session) and the user-managed session turn model.
+- TUI exclusion, setup, and verification.
+
+Write `knowledge/boundaries.md`:
+
+- The Art Lib, Art JS, and Art Agents service boundaries — consumed, never re-implemented.
+- The Domain: Messages transport direction: direct session relays versus a message board with `re-read` prepended to the next prompt.
+
+Validate that:
+
+- Every document linked from `knowledge/index.md` exists.
+- Setup and verification match `$ART_BOARDS/_guide.md`; no TUI claims appear anywhere.
+
+After executing:
+
+- Commit `document-switchboard-architecture`, then `document-service-boundaries`, each with its blueprint message (policy `NOPUSH` — do not push).
+- Report the outcome in chat — inlined instructions report in chat.
 
 **Changes:**
 
@@ -126,10 +181,10 @@ docs(switchboard-cli): Write the package overview.
 
 #### Commits:
 
-| ID                                  | Repository / Checkout / Branch           | Policy   | Hash  | Status        |
-| ----------------------------------- | ---------------------------------------- | -------- | ----- | ------------- |
-| `document-switchboard-architecture` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
-| `document-service-boundaries`       | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `PLACEHOLDER` |
+| ID                                  | Repository / Checkout / Branch           | Policy   | Hash  | Status     |
+| ----------------------------------- | ---------------------------------------- | -------- | ----- | ---------- |
+| `document-switchboard-architecture` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `AUTHORED` |
+| `document-service-boundaries`       | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `AUTHORED` |
 
 ##### Commit: `document-switchboard-architecture`
 
@@ -151,7 +206,7 @@ docs(switchboard-cli): Document the service boundaries and message transport.
 
 ### Next
 
-- Write implementation instructions for the iterations, then delegate.
+- Delegate the READY iterations.
 
 ### Blockers
 
