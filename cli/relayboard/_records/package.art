@@ -1,10 +1,10 @@
 # Module
 
-## Package: Art Switchboard CLI
+## Package: Art Relayboard CLI
 
 **Purpose:** Coordinate multi-agent collaboration sessions over arbitrary artefacts.
 
-**Description:** CLI package that starts and attaches agent sessions over a switchboard record; contains the command surface, switchboard management, and turn coordination modules.
+**Description:** CLI package that starts and attaches agent sessions over a relayboard record; contains the command surface, relayboard management, and turn coordination modules.
 
 **Owner:** Project: Art Boards
 
@@ -12,9 +12,9 @@
 
 **Author:** Noodlestan Collective
 
-**Path:** `cli/switchboard`
+**Path:** `cli/relayboard`
 
-**Canonical Name:** `@art-boards/switchboard-cli`
+**Canonical Name:** `@art-boards/relayboard-cli`
 
 **Published:** `false`
 
@@ -23,7 +23,7 @@
 **Keywords:**
 
 - cli
-- switchboards
+- relayboards
 - art
 - agent-workflows
 - delegation
@@ -40,7 +40,7 @@
 
 **Bin:**
 
-- `art-switchboard-cli`: `./dist/index.mjs`
+- `art-relayboard-cli`: `./dist/index.mjs`
 
 **Engines:**
 

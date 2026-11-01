@@ -1,6 +1,6 @@
 # Instructions: `scaffold-package`
 
-**Plan:** `scaffold-art-switchboard-cli`
+**Plan:** `scaffold-art-relayboard-cli`
 
 **Iteration Id:** `scaffold-package`
 
@@ -18,7 +18,7 @@ This section describes how to report back to the delegator after completing the 
 
 1. Summarise the current context, asking: are you reporting completion or a BLOCKER?
 2. Gather the evidence of changes made and outcomes achieved, or the blocker error details.
-3. Use the `render-template` skill with the `.agents/domains/plans/templates/instructions-report.tart` to render your report and write it next to this instruction file: `plan-scaffold-art-switchboard-cli/instructions/scaffold-package__report.md`.
+3. Use the `render-template` skill with the `.agents/domains/plans/templates/instructions-report.tart` to render your report and write it next to this instruction file: `plan-scaffold-art-relayboard-cli/instructions/scaffold-package__report.md`.
 4. If your prompt included a `DIRECTIVE FEEDBACK:` include the feedback sections in the rendered report.
 5. Generate the response and send it back to the delegator.
 6. Keep the response terse per the Working Agreements: happy face + up to 3 bullet points (done `scaffold-package`, created {artefacts}, thumbs up). The full trail lives in the report file; never repeat it in chat.
@@ -30,7 +30,7 @@ This section describes how to report back to the delegator after completing the 
 | `$WORKSPACE`             | Current working directory         | Workspace root directory                           |
 | `$ART_BOARDS`            | `$WORKSPACE/checkouts/art-boards` | Art Boards repository — run all commands from here |
 | `$ART_BOARDS_WHITEBOARD` | `$ART_BOARDS/cli/whiteboard`      | Sibling package layout reference                   |
-| `$ART_SWITCHBOARD`       | `$ART_BOARDS/cli/switchboard`     | The package being scaffolded                       |
+| `$ART_RELAYBOARD`        | `$ART_BOARDS/cli/relayboard`      | The package being scaffolded                       |
 
 ## Working Agreements
 
@@ -42,7 +42,7 @@ The plan workflow (see the entry point guide → Planning Workflow → Working T
 
 ## Goals
 
-Deliver a buildable `@art-boards/switchboard-cli` package foundation at `$ART_SWITCHBOARD` — manifest, TypeScript/build/test/lint configuration, source and test skeletons, release files, and repository wiring — through the commits `scaffold-package-foundation`, `scaffold-source-test-skeleton`, `add-package-release-files`, and `wire-workspace-tooling`.
+Deliver a buildable `@art-boards/relayboard-cli` package foundation at `$ART_RELAYBOARD` — manifest, TypeScript/build/test/lint configuration, source and test skeletons, release files, and repository wiring — through the commits `scaffold-package-foundation`, `scaffold-source-test-skeleton`, `add-package-release-files`, and `wire-workspace-tooling`.
 
 ## Mandatory Reading
 
@@ -109,25 +109,25 @@ All steps MUST pass.
 
 ### Step `1 / 9` — Create the package manifest
 
-Create `$ART_SWITCHBOARD/package.json` with:
+Create `$ART_RELAYBOARD/package.json` with:
 
-- `name`: `@art-boards/switchboard-cli`
+- `name`: `@art-boards/relayboard-cli`
 - `version`: `0.0.1`
-- `description`: `Switchboard CLI — multi-agent collaboration sessions over arbitrary artefacts.`
+- `description`: `Relayboard CLI — multi-agent collaboration sessions over arbitrary artefacts.`
 - `type`: `module`
 - `license`: `MIT`, `author`: `Noodlestan`
-- `private`: `false`, `keywords`: mirror the package record (`cli`, `switchboards`, `art`, `agent-workflows`, `delegation`, `agent-visualization`)
+- `private`: `false`, `keywords`: mirror the package record (`cli`, `relayboards`, `art`, `agent-workflows`, `delegation`, `agent-visualization`)
 - `engines`: `{ "node": ">=22" }`
 - `files`: `["dist", "LICENSE-MIT", "README.md"]`
 - `repository`: mirror the root repository object (`git`, `https://github.com/noodlestan/art-boards.git`)
 
-Do **not** add a `bin` field — the command surface lands in Plan: Create Art Switchboard CLI Bin. Do not add scripts yet — Step 8 wires them.
+Do **not** add a `bin` field — the command surface lands in Plan: Create Art Relayboard CLI Bin. Do not add scripts yet — Step 8 wires them.
 
 Expected outcome: `npm install` in the workspace recognises the package (`cli/**` is already a workspace glob in the root manifest).
 
 ### Step `2 / 9` — Add TypeScript and build configuration
 
-- Create `$ART_SWITCHBOARD/tsconfig.json` extending the `@noodlestan/tsconfig` package preset — inspect `node_modules/@noodlestan/tsconfig/` for the available presets (the root uses `@noodlestan/tsconfig/monorepo/tsconfig.json`); include `src/` and `test/`, exclude `node_modules/`, `dist/`, `coverage/`.
+- Create `$ART_RELAYBOARD/tsconfig.json` extending the `@noodlestan/tsconfig` package preset — inspect `node_modules/@noodlestan/tsconfig/` for the available presets (the root uses `@noodlestan/tsconfig/monorepo/tsconfig.json`); include `src/` and `test/`, exclude `node_modules/`, `dist/`, `coverage/`.
 - Configure the build to emit `dist/index.mjs` from `src/index.ts` using `@noodlestan/esbuild` (root devDependency) — inspect `node_modules/@noodlestan/esbuild` for the expected invocation or config file.
 - Vitest runs from the repository root devDependencies; ensure the default test glob picks up `test/` (add `vitest.config.ts` only if needed).
 
@@ -143,12 +143,12 @@ Expected outcome: `dist/index.mjs` is buildable from `src/index.ts`; tests in `t
 
 **Message:**
 
-scaffold(switchboard-cli): Add the package manifest and build, test, and lint configuration.
+scaffold(relayboard-cli): Add the package manifest and build, test, and lint configuration.
 
 ### Step `4 / 9` — Scaffold the source and test skeletons
 
-- Create `$ART_SWITCHBOARD/src/index.ts` — minimal ESM entry placeholder (a trivial exported constant is enough; no argument parsing, no CLI behavior).
-- Create `$ART_SWITCHBOARD/test/index.test.ts` — minimal vitest test importing from `../src/index.ts` and asserting the placeholder export, following the unit-test conventions from the Mandatory Reading.
+- Create `$ART_RELAYBOARD/src/index.ts` — minimal ESM entry placeholder (a trivial exported constant is enough; no argument parsing, no CLI behavior).
+- Create `$ART_RELAYBOARD/test/index.test.ts` — minimal vitest test importing from `../src/index.ts` and asserting the placeholder export, following the unit-test conventions from the Mandatory Reading.
 
 Expected outcome: the test file passes under `vitest run`.
 
@@ -162,12 +162,12 @@ Expected outcome: the test file passes under `vitest run`.
 
 **Message:**
 
-scaffold(switchboard-cli): Scaffold the source and test directories with placeholders.
+scaffold(relayboard-cli): Scaffold the source and test directories with placeholders.
 
 ### Step `6 / 9` — Add the release files
 
-- Create `$ART_SWITCHBOARD/README.md` — package name, one-line purpose, setup (`npm ci` from `$ART_BOARDS`), and verification (`npm run lint`, `npm run ci`); keep it short, the knowledge plan expands the documentation.
-- Create `$ART_SWITCHBOARD/LICENSE-MIT` — copy `$ART_BOARDS/LICENSE-MIT`.
+- Create `$ART_RELAYBOARD/README.md` — package name, one-line purpose, setup (`npm ci` from `$ART_BOARDS`), and verification (`npm run lint`, `npm run ci`); keep it short, the knowledge plan expands the documentation.
+- Create `$ART_RELAYBOARD/LICENSE-MIT` — copy `$ART_BOARDS/LICENSE-MIT`.
 
 ### Step `7 / 9` — Commit `add-package-release-files`
 
@@ -179,7 +179,7 @@ scaffold(switchboard-cli): Scaffold the source and test directories with placeho
 
 **Message:**
 
-scaffold(switchboard-cli): Add the package README and license files.
+scaffold(relayboard-cli): Add the package README and license files.
 
 ### Step `8 / 9` — Connect the package scripts to the repository tooling
 
@@ -209,7 +209,7 @@ Expected outcome: the workspace links the package, `turbo run ci` builds `dist/i
 
 **Message:**
 
-build(switchboard-cli): Connect package scripts to the repository workspace tooling.
+build(relayboard-cli): Connect package scripts to the repository workspace tooling.
 
 ## Final Verification
 

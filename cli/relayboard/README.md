@@ -1,21 +1,21 @@
-# @art-boards/switchboard-cli
+# @art-boards/relayboard-cli
 
 **Purpose:** Coordinate multi-agent collaboration sessions over arbitrary artefacts.
 
-**Description:** CLI package that starts and attaches agent sessions over a switchboard record; contains the command surface, switchboard management, and turn coordination modules.
+**Description:** CLI package that starts and attaches agent sessions over a relayboard record; contains the command surface, relayboard management, and turn coordination modules.
 
 > Status: in development — not yet published. The command surface lands with the bin plan.
 
 ## Installation
 
 ```bash
-npm install -g @art-boards/switchboard-cli
+npm install -g @art-boards/relayboard-cli
 ```
 
 ## Usage
 
 ```bash
-art-switchboard-cli --help
+art-relayboard-cli --help
 ```
 
 ## Development

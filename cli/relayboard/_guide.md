@@ -1,13 +1,13 @@
-# Guide: Art Switchboard Cli
+# Guide: Art Relayboard Cli
 
-The Art Switchboard Cli package (`@art-boards/switchboard-cli`, binary `art-switchboard-cli`) coordinates multi-agent collaboration sessions over arbitrary artefacts. It reads and validates switchboards — a scope, a set of rules, and an arbitrary artefact set — starts and attaches agent sessions, relays messages between them, and serves the SolidJS web application.
+The Art Relayboard Cli package (`@art-boards/relayboard-cli`, binary `art-relayboard-cli`) coordinates multi-agent collaboration sessions over arbitrary artefacts. It reads and validates relayboards — a scope, a set of rules, and an arbitrary artefact set — starts and attaches agent sessions, relays messages between them, and serves the SolidJS web application.
 
 ## Recommended Reading
 
 Agents SHOULD scan these files for relevant clarifications when faced with ambiguity or omissions that may result from missing definitions.
 
 - `_guide.md` — this file: package overview, layout, records, and operating instructions.
-- `knowledge/index.md` — use cases, architecture, and the operating model for the switchboard, sessions, relays, and the web application.
+- `knowledge/index.md` — use cases, architecture, and the operating model for the relayboard, sessions, relays, and the web application.
 
 ## Package Layout
 

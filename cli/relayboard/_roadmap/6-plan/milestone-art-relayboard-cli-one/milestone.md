@@ -1,6 +1,6 @@
-# Milestone: Art Switchboard CLI One
+# Milestone: Art Relayboard CLI One
 
-**ID:** `art-switchboard-cli-one`
+**ID:** `art-relayboard-cli-one`
 
 **Status:** `DRAFT`
 
@@ -10,9 +10,9 @@
 
 **Skill:** `write-milestone`
 
-**Purpose:** Deliver the first releasable `@art-boards/switchboard-cli` for coordinating multi-agent collaboration sessions over arbitrary artefact sets — plans, instructions, attachments — through a web application.
+**Purpose:** Deliver the first releasable `@art-boards/relayboard-cli` for coordinating multi-agent collaboration sessions over arbitrary artefact sets — plans, instructions, attachments — through a web application.
 
-**Description:** Seven phases establish the CLI baseline, session management, switchboard and artefact management, a web UI and its interactions, message-board transport, and a first public release. TUI is explicitly out of scope.
+**Description:** Seven phases establish the CLI baseline, session management, relayboard and artefact management, a web UI and its interactions, message-board transport, and a first public release. TUI is explicitly out of scope.
 
 ## Mandatory Reading
 
@@ -22,23 +22,23 @@
 
 ## Path Variables
 
-| Variable           | Resolved Path                     | Purpose                                      |
-| ------------------ | --------------------------------- | -------------------------------------------- |
-| `$WORKSPACE`       | Current working directory         | Workspace root directory                     |
-| `$DOMAINS`         | `$WORKSPACE/.agents/domains`      | Domain resources directory                   |
-| `$ART_BOARDS`      | `$WORKSPACE/checkouts/art-boards` | Art Boards repository                        |
-| `$ART_SWITCHBOARD` | `$ART_BOARDS/cli/switchboard`     | Art Switchboard CLI package and its planning |
-| `$ART_WHITEBOARD`  | `$ART_BOARDS/cli/whiteboard`      | Sibling CLI package, inception, and research |
-| `$ART_LIB`         | `$WORKSPACE/checkouts/art-lib`    | Shared libraries and CLI infrastructure      |
-| `$ART_JS`          | `$WORKSPACE/checkouts/art-js`     | Shared record operations                     |
+| Variable          | Resolved Path                     | Purpose                                      |
+| ----------------- | --------------------------------- | -------------------------------------------- |
+| `$WORKSPACE`      | Current working directory         | Workspace root directory                     |
+| `$DOMAINS`        | `$WORKSPACE/.agents/domains`      | Domain resources directory                   |
+| `$ART_BOARDS`     | `$WORKSPACE/checkouts/art-boards` | Art Boards repository                        |
+| `$ART_RELAYBOARD` | `$ART_BOARDS/cli/relayboard`      | Art Relayboard CLI package and its planning  |
+| `$ART_WHITEBOARD` | `$ART_BOARDS/cli/whiteboard`      | Sibling CLI package, inception, and research |
+| `$ART_LIB`        | `$WORKSPACE/checkouts/art-lib`    | Shared libraries and CLI infrastructure      |
+| `$ART_JS`         | `$WORKSPACE/checkouts/art-js`     | Shared record operations                     |
 
 ## Summary
 
-Deliver the first `@art-boards/switchboard-cli`: scaffold and launch the CLI, manage runner sessions, read and monitor switchboards — scope, rules, and arbitrary artefact definitions — coordinate user-managed turns across multiple agent sessions over the same artefacts, provide a web UI, adopt message-board transport from Domain: Messages, and release the application. Phase 1 holds the three plan files under the package backlog.
+Deliver the first `@art-boards/relayboard-cli`: scaffold and launch the CLI, manage runner sessions, read and monitor relayboards — scope, rules, and arbitrary artefact definitions — coordinate user-managed turns across multiple agent sessions over the same artefacts, provide a web UI, adopt message-board transport from Domain: Messages, and release the application. Phase 1 holds the three plan files under the package backlog.
 
 ## Scope
 
-This milestone coordinates the Art Switchboard CLI from package foundation through its first releasable web-backed application. Phase 1 is the only phase decomposed into plan outlines here; later phases remain high-level delivery summaries.
+This milestone coordinates the Art Relayboard CLI from package foundation through its first releasable web-backed application. Phase 1 is the only phase decomposed into plan outlines here; later phases remain high-level delivery summaries.
 
 ### (Scope) Repository: Art Boards
 
@@ -52,34 +52,34 @@ This milestone coordinates the Art Switchboard CLI from package foundation throu
 - `workspaces` — `cli/**`
 - `private` — `false`
 
-**Changes:** Add the switchboard CLI package, web application, and milestone outputs.
+**Changes:** Add the relayboard CLI package, web application, and milestone outputs.
 
-### (Scope) Package: Art Switchboard CLI
+### (Scope) Package: Art Relayboard CLI
 
-**Record:** To be created in Phase 1, by Plan: Scaffold Art Switchboard CLI.
+**Record:** To be created in Phase 1, by Plan: Scaffold Art Relayboard CLI.
 
 **Role:** Product package for artefact-based multi-agent collaboration sessions.
 
 **Partial:**
 
-- `canonicalName` — `@art-boards/switchboard-cli`
-- `path` — `cli/switchboard`
-- `bin` — `art-switchboard-cli`
+- `canonicalName` — `@art-boards/relayboard-cli`
+- `path` — `cli/relayboard`
+- `bin` — `art-relayboard-cli`
 - `published` — `true`
 
-**Changes:** Scaffold, provide a CLI bin, implement switchboard and session behavior, build the web UI, and publish the first usable release.
+**Changes:** Scaffold, provide a CLI bin, implement relayboard and session behavior, build the web UI, and publish the first usable release.
 
-### (Scope) Application: Switchboard
+### (Scope) Application: Relayboard
 
 **Record:** To be created when the application package is scaffolded.
 
-**Role:** SolidJS web UI for the Art Switchboard CLI.
+**Role:** SolidJS web UI for the Art Relayboard CLI.
 
 **Partial:**
 
 - `framework` — SolidJS.
 - `dev` — Runs standalone with `npm run dev` while the CLI serves nothing.
-- `transport` — Connects over WebSocket to the running `art-switchboard-cli` instance.
+- `transport` — Connects over WebSocket to the running `art-relayboard-cli` instance.
 - `serving` — Served by the CLI itself once the web UI is delivered.
 
 **Changes:** Scaffold the application package, develop it independently against a running CLI instance, and hand serving over to the CLI in the Web UI phases.
@@ -101,7 +101,7 @@ This milestone coordinates the Art Switchboard CLI from package foundation throu
 
 **Record:** `$ART_JS/_records/project.art`
 
-**Role:** Upstream provider of record operations used by Switchboard Management.
+**Role:** Upstream provider of record operations used by Relayboard Management.
 
 **Partial:**
 
@@ -125,7 +125,7 @@ This milestone coordinates the Art Switchboard CLI from package foundation throu
 
 ## Execution Context
 
-Planning and package verification occur from `$ART_BOARDS`; package source and web application work live under `$ART_SWITCHBOARD`. Art Lib and Art JS capabilities are consumed according to their own delivery plans. Session services follow Project: Art Agents once extracted; until then, runner capabilities are consumed directly as documented in the session-management research.
+Planning and package verification occur from `$ART_BOARDS`; package source and web application work live under `$ART_RELAYBOARD`. Art Lib and Art JS capabilities are consumed according to their own delivery plans. Session services follow Project: Art Agents once extracted; until then, runner capabilities are consumed directly as documented in the session-management research.
 
 ## Upstream Work
 
@@ -183,7 +183,7 @@ Planning and package verification occur from `$ART_BOARDS`; package source and w
 | ----- | ----------------------- | ---------- |
 | 1     | Hello World             | `PLANNING` |
 | 2     | Session Management      | `DRAFT`    |
-| 3     | Switchboard Management  | `DRAFT`    |
+| 3     | Relayboard Management   | `DRAFT`    |
 | 4     | Web UI MVP              | `DRAFT`    |
 | 5     | Web UI Interactions     | `DRAFT`    |
 | 6     | Message Board Transport | `DRAFT`    |
@@ -191,9 +191,9 @@ Planning and package verification occur from `$ART_BOARDS`; package source and w
 
 ### Phase: 1 — Hello World
 
-**Goal:** Establish a buildable Art Switchboard CLI package, an executable bin using Art Lib's shared CLI infrastructure, and a useful package knowledge base.
+**Goal:** Establish a buildable Art Relayboard CLI package, an executable bin using Art Lib's shared CLI infrastructure, and a useful package knowledge base.
 
-**Description:** Scaffold the package, create its bin using Art Lib config/logger/operations/runner capabilities, and create package knowledge. The plan files live under `$ART_SWITCHBOARD/_backlog/4-now/`.
+**Description:** Scaffold the package, create its bin using Art Lib config/logger/operations/runner capabilities, and create package knowledge. The plan files live under `$ART_RELAYBOARD/_backlog/4-now/`.
 
 **Status:** `PLANNING`
 
@@ -203,7 +203,7 @@ Planning and package verification occur from `$ART_BOARDS`; package source and w
 
 ### Phase: 2 — Session Management
 
-**Goal:** Provide the connection and session-management services required to start, attach to, and resume agent sessions that collaborate on a switchboard.
+**Goal:** Provide the connection and session-management services required to start, attach to, and resume agent sessions that collaborate on a relayboard.
 
 **Description:** Deliver runner connection; session listing; starting a new session (the original planner, an invited reviewer, or later participants); attaching to or resuming an existing session where supported; and sending a prompt to a session. Consume Project: Art Agents services once extracted; until then, consume runner capabilities directly. Preserve runner capability differences rather than assuming attachment, resumption, and terminal handoff are equivalent.
 
@@ -213,30 +213,30 @@ Planning and package verification occur from `$ART_BOARDS`; package source and w
 
 - Project: Art Agents connection and session-management services when extracted by Milestone: Art Whiteboard CLI One, Phase 6; until available, runner capabilities as documented in the session-management research.
 
-### Phase: 3 — Switchboard Management
+### Phase: 3 — Relayboard Management
 
-**Goal:** Reliably interpret a switchboard — a scope, a set of rules, and an arbitrary set of artefacts — and coordinate participant turns through the session services.
+**Goal:** Reliably interpret a relayboard — a scope, a set of rules, and an arbitrary set of artefacts — and coordinate participant turns through the session services.
 
-**Description:** Define the switchboard record carrying scope, rules, and artefact definitions over arbitrary artefact files (plans, instructions, attachments, any artefact); use `@art-js/records` and the filesystem records layer as the records substrate; read and validate switchboards; identify the artefacts where collaboration happens; watch for switchboard changes; prepend the scope/rules/artefact definitions to the first prompt of a newly started session; and notify sessions when artefacts change. Offer validation as a CLI entry point (for example, `--validate {file}`) and as UI feedback on load and change; do not directly invoke Artificials routines. Do not implement a switchboard-specific records parser or writer.
+**Description:** Define the relayboard record carrying scope, rules, and artefact definitions over arbitrary artefact files (plans, instructions, attachments, any artefact); use `@art-js/records` and the filesystem records layer as the records substrate; read and validate relayboards; identify the artefacts where collaboration happens; watch for relayboard changes; prepend the scope/rules/artefact definitions to the first prompt of a newly started session; and notify sessions when artefacts change. Offer validation as a CLI entry point (for example, `--validate {file}`) and as UI feedback on load and change; do not directly invoke Artificials routines. Do not implement a relayboard-specific records parser or writer.
 
 **Status:** `DRAFT`
 
 **Dependencies:**
 
 - `@art-js/records` extraction, update, and proxy capabilities for deterministic nested record access and updates.
-- `@art-lib/fs-records` discovery and filesystem content-source capabilities for locating and accessing switchboard and artefact files.
+- `@art-lib/fs-records` discovery and filesystem content-source capabilities for locating and accessing relayboard and artefact files.
 
 ### Phase: 4 — Web UI MVP
 
-**Goal:** Provide a browser-based view of the switchboard, its artefacts, and current session state.
+**Goal:** Provide a browser-based view of the relayboard, its artefacts, and current session state.
 
-**Description:** Scaffold, build, and serve the web application; establish its socket connection; display the switchboard scope, rules, and artefact list, the registered sessions, the current turn, and the changes list; and allow starting a session or attaching to an existing one. This is a web UI, not a terminal UI.
+**Description:** Scaffold, build, and serve the web application; establish its socket connection; display the relayboard scope, rules, and artefact list, the registered sessions, the current turn, and the changes list; and allow starting a session or attaching to an existing one. This is a web UI, not a terminal UI.
 
 **Status:** `DRAFT`
 
 **Dependencies:**
 
-- None identified beyond switchboard and session data supplied by earlier phases.
+- None identified beyond relayboard and session data supplied by earlier phases.
 
 ### Phase: 5 — Web UI Interactions
 
@@ -264,7 +264,7 @@ Planning and package verification occur from `$ART_BOARDS`; package source and w
 
 ### Phase: 7 — First Release
 
-**Goal:** Publish a verified first releasable Art Switchboard CLI.
+**Goal:** Publish a verified first releasable Art Relayboard CLI.
 
 **Description:** Complete integration testing with checked-in filesystem fixtures and a mock runner server, verifying unsupported operations, errors, interruption, and shutdown; then verify the end-to-end multi-session turn flow over shared artefacts — prompt prepending, direct relays, and message-board transport — plus package and web application builds, supported runner behavior, clean shutdown, and release documentation; publish the CLI package and update its deployment record.
 
@@ -278,11 +278,11 @@ Planning and package verification occur from `$ART_BOARDS`; package source and w
 
 ## Items:
 
-| Phase | Resource / Record                                                                                                              | Status     |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------ | ---------- |
-| 1     | Plan: Scaffold Art Switchboard CLI `$ART_SWITCHBOARD/_backlog/4-now/plan-scaffold-art-switchboard-cli/plan.md`                 | `DONE`     |
-| 1     | Plan: Create Art Switchboard CLI Bin `$ART_SWITCHBOARD/_backlog/4-now/plan-create-art-switchboard-cli-bin/plan.md`             | `PLANNING` |
-| 1     | Plan: Create Art Switchboard CLI Knowledge `$ART_SWITCHBOARD/_backlog/4-now/plan-create-art-switchboard-cli-knowledge/plan.md` | `DONE`     |
+| Phase | Resource / Record                                                                                                           | Status     |
+| ----- | --------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| 1     | Plan: Scaffold Art Relayboard CLI `$ART_RELAYBOARD/_backlog/4-now/plan-scaffold-art-relayboard-cli/plan.md`                 | `DONE`     |
+| 1     | Plan: Create Art Relayboard CLI Bin `$ART_RELAYBOARD/_backlog/4-now/plan-create-art-relayboard-cli-bin/plan.md`             | `PLANNING` |
+| 1     | Plan: Create Art Relayboard CLI Knowledge `$ART_RELAYBOARD/_backlog/4-now/plan-create-art-relayboard-cli-knowledge/plan.md` | `DONE`     |
 
 ## Work
 
@@ -330,41 +330,41 @@ npm run ci
 ### Not In Scope
 
 - **Terminal UI (TUI)** — the user interface in this milestone is browser-based, matching Milestone: Art Whiteboard CLI One.
-- **Whiteboard participant monitoring** — the fixed whiteboard record and its participant/sentiment model stay owned by the Art Whiteboard CLI; switchboards are arbitrary artefact sets.
+- **Whiteboard participant monitoring** — the fixed whiteboard record and its participant/sentiment model stay owned by the Art Whiteboard CLI; relayboards are arbitrary artefact sets.
 - **Session-service extraction** — extracting connection and session management to Project: Art Agents belongs to Milestone: Art Whiteboard CLI One; this milestone consumes the result.
 - **Detailed plans for Phases 2–7** — those phases remain high-level; create their plans as the milestone advances.
-- **Switchboard-specific records parsing** — use the Art JS records and filesystem records packages.
+- **Relayboard-specific records parsing** — use the Art JS records and filesystem records packages.
 
 ### Evidence
 
-- **CLI package builds** and exposes the `art-switchboard-cli` executable.
-- **Artefact-scoped prompts** — a newly started session receives the switchboard scope, rules, and artefact definitions prepended to its first prompt.
+- **CLI package builds** and exposes the `art-relayboard-cli` executable.
+- **Artefact-scoped prompts** — a newly started session receives the relayboard scope, rules, and artefact definitions prepended to its first prompt.
 - **Managed turns** — a user continues with the planning agent or starts/attaches a reviewer session, and a cross-session update reaches the target session.
 - **Message-board transport** — a message board artefact can be created and used, with `re-read` prepended to the next prompt.
-- **Web UI** displays the switchboard artefacts, sessions, current turn, and changes, with supported session interactions.
-- **Robustness** — invalid switchboards, unavailable sessions, and no-action states cause no unintended artefact changes or duplicate prompts.
+- **Web UI** displays the relayboard artefacts, sessions, current turn, and changes, with supported session interactions.
+- **Robustness** — invalid relayboards, unavailable sessions, and no-action states cause no unintended artefact changes or duplicate prompts.
 - **Tests** — unit tests cover core logic; integration tests run against checked-in filesystem fixtures and a mock runner server; unsupported operations, errors, interruption, and shutdown are verified.
 - **First release** is published to the npm registry with its deployment record updated.
 
 ### Findings
 
 - **Runner capabilities differ** — live attachment, persisted-session resumption, and terminal handoff are distinct capabilities and must be verified per adapter.
-- **Message channels differ** — direct session prompts and the Message Board are distinct transports; the switchboard routes collaboration over either.
-- **Artefacts are arbitrary** — the switchboard references artefact paths and definitions; it must not parse or interpret artefact contents.
+- **Message channels differ** — direct session prompts and the Message Board are distinct transports; the relayboard routes collaboration over either.
+- **Artefacts are arbitrary** — the relayboard references artefact paths and definitions; it must not parse or interpret artefact contents.
 
 ### Decisions
 
 - **Phase 1 has three plans only** — scaffold, CLI bin, and package knowledge; the plan files live in the package backlog.
 - **Art Agents owns session services** — connection and session management are consumed from Project: Art Agents when available, never re-implemented.
 - **No TUI** — the user interface in this milestone is a web application.
-- **Records substrate** — use `@art-js/records` and the filesystem records layer in Switchboard Management; do not add a bespoke parser/writer.
+- **Records substrate** — use `@art-js/records` and the filesystem records layer in Relayboard Management; do not add a bespoke parser/writer.
 - **Prompt prepending** — scope, rules, and artefact definitions are prepended to the first prompt of a new session, not injected into artefact contents.
 - **Message board is additive** — Domain: Messages transport is adopted later (Phase 6) without removing direct session relays.
 
 ### Knowledge to Update
 
-- `$ART_SWITCHBOARD/knowledge/index.md` — link the CLI overview and architecture/use-case resources produced by the Phase 1 knowledge plan.
-- `$ART_BOARDS/_guide.md` — list `cli/switchboard` under Repository Layout, Knowledge References, and the hosted roadmaps/backlogs, reconciling the existing `cli/board/` entries.
+- `$ART_RELAYBOARD/knowledge/index.md` — link the CLI overview and architecture/use-case resources produced by the Phase 1 knowledge plan.
+- `$ART_BOARDS/_guide.md` — list `cli/relayboard` under Repository Layout, Knowledge References, and the hosted roadmaps/backlogs, reconciling the existing `cli/board/` entries.
 - `$ART_BOARDS/_roadmap/_parking-lot.md` — remove the POC milestone item once this milestone advances beyond `DRAFT`.
 
 ### Follow Ups

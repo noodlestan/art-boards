@@ -1,6 +1,6 @@
-# Plan: Scaffold Art Switchboard CLI
+# Plan: Scaffold Art Relayboard CLI
 
-**ID:** `scaffold-art-switchboard-cli`
+**ID:** `scaffold-art-relayboard-cli`
 
 **Status:** `DONE`
 
@@ -8,9 +8,9 @@
 
 **Skill:** `write-plan`
 
-**Purpose:** Establish the minimum publishable package foundation for `@art-boards/switchboard-cli`.
+**Purpose:** Establish the minimum publishable package foundation for `@art-boards/relayboard-cli`.
 
-**Description:** Plan record with 2 iterations, executed within `$ART_SWITCHBOARD`.
+**Description:** Plan record with 2 iterations, executed within `$ART_RELAYBOARD`.
 
 ## Mandatory Reading
 
@@ -20,25 +20,25 @@
 
 ## Path Variables
 
-| Variable                 | Resolved Path                     | Purpose                                            |
-| ------------------------ | --------------------------------- | -------------------------------------------------- |
-| `$WORKSPACE`             | Current working directory         | Workspace root directory                           |
-| `$ART_BOARDS`            | `$WORKSPACE/checkouts/art-boards` | Art Boards repository                              |
-| `$ART_BOARDS_WHITEBOARD` | `$ART_BOARDS/cli/whiteboard`      | Sibling CLI package layout reference               |
-| `$ART_SWITCHBOARD`       | `$ART_BOARDS/cli/switchboard`     | The Art Switchboard CLI package, and its planning. |
+| Variable                 | Resolved Path                     | Purpose                                           |
+| ------------------------ | --------------------------------- | ------------------------------------------------- |
+| `$WORKSPACE`             | Current working directory         | Workspace root directory                          |
+| `$ART_BOARDS`            | `$WORKSPACE/checkouts/art-boards` | Art Boards repository                             |
+| `$ART_BOARDS_WHITEBOARD` | `$ART_BOARDS/cli/whiteboard`      | Sibling CLI package layout reference              |
+| `$ART_RELAYBOARD`        | `$ART_BOARDS/cli/relayboard`      | The Art Relayboard CLI package, and its planning. |
 
 ## Summary
 
-Scaffold `@art-boards/switchboard-cli` at `cli/switchboard`: manifest, build/test/lint foundation, and source/test skeleton wired to the repository workspace tooling, plus the package record describing the package and its bin.
+Scaffold `@art-boards/relayboard-cli` at `cli/relayboard`: manifest, build/test/lint foundation, and source/test skeleton wired to the repository workspace tooling, plus the package record describing the package and its bin.
 
 ## Context
 
 ### Upstream Work
 
-| Kind        | Path                                                                              | Role                                           |
-| ----------- | --------------------------------------------------------------------------------- | ---------------------------------------------- |
-| Milestone   | `$ART_SWITCHBOARD/_roadmap/6-plan/milestone-art-switchboard-cli-one/milestone.md` | Parent milestone; source of the plan outline.  |
-| Parking Lot | `$ART_BOARDS/_roadmap/_parking-lot.md`                                            | Tracks the switchboard CLI milestone proposal. |
+| Kind        | Path                                                                            | Role                                          |
+| ----------- | ------------------------------------------------------------------------------- | --------------------------------------------- |
+| Milestone   | `$ART_RELAYBOARD/_roadmap/6-plan/milestone-art-relayboard-cli-one/milestone.md` | Parent milestone; source of the plan outline. |
+| Parking Lot | `$ART_BOARDS/_roadmap/_parking-lot.md`                                          | Tracks the relayboard CLI milestone proposal. |
 
 ### Required Skills
 
@@ -89,12 +89,12 @@ Package skeleton only — manifest, build/test/lint configuration, source and te
 
 #### Commits:
 
-| ID                              | Repository / Checkout / Branch           | Policy   | Hash      | Status      |
-| ------------------------------- | ---------------------------------------- | -------- | --------- | ----------- |
-| `scaffold-package-foundation`   | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | `b52d3e0` | `COMMITTED` |
-| `scaffold-source-test-skeleton` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | `c8a9ab3` | `COMMITTED` |
-| `add-package-release-files`     | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | `11d68a0` | `COMMITTED` |
-| `wire-workspace-tooling`        | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | `ee6a40e` | `COMMITTED` |
+| ID                              | Repository / Checkout / Branch          | Policy   | Hash      | Status      |
+| ------------------------------- | --------------------------------------- | -------- | --------- | ----------- |
+| `scaffold-package-foundation`   | Art Boards / `$ART_RELAYBOARD` / `main` | `NOPUSH` | `b52d3e0` | `COMMITTED` |
+| `scaffold-source-test-skeleton` | Art Boards / `$ART_RELAYBOARD` / `main` | `NOPUSH` | `c8a9ab3` | `COMMITTED` |
+| `add-package-release-files`     | Art Boards / `$ART_RELAYBOARD` / `main` | `NOPUSH` | `11d68a0` | `COMMITTED` |
+| `wire-workspace-tooling`        | Art Boards / `$ART_RELAYBOARD` / `main` | `NOPUSH` | `ee6a40e` | `COMMITTED` |
 
 ##### Commit: `scaffold-package-foundation`
 
@@ -102,7 +102,7 @@ Package skeleton only — manifest, build/test/lint configuration, source and te
 
 **Message:**
 
-scaffold(switchboard-cli): Add the package manifest and build, test, and lint configuration.
+scaffold(relayboard-cli): Add the package manifest and build, test, and lint configuration.
 
 ##### Commit: `scaffold-source-test-skeleton`
 
@@ -110,7 +110,7 @@ scaffold(switchboard-cli): Add the package manifest and build, test, and lint co
 
 **Message:**
 
-scaffold(switchboard-cli): Scaffold the source and test directories with placeholders.
+scaffold(relayboard-cli): Scaffold the source and test directories with placeholders.
 
 ##### Commit: `add-package-release-files`
 
@@ -118,7 +118,7 @@ scaffold(switchboard-cli): Scaffold the source and test directories with placeho
 
 **Message:**
 
-scaffold(switchboard-cli): Add the package README and license files.
+scaffold(relayboard-cli): Add the package README and license files.
 
 ##### Commit: `wire-workspace-tooling`
 
@@ -126,7 +126,7 @@ scaffold(switchboard-cli): Add the package README and license files.
 
 **Message:**
 
-build(switchboard-cli): Connect package scripts to the repository workspace tooling.
+build(relayboard-cli): Connect package scripts to the repository workspace tooling.
 
 ### Iteration: 2 — create-package-record
 
@@ -134,7 +134,7 @@ build(switchboard-cli): Connect package scripts to the repository workspace tool
 
 **Status:** `DONE`
 
-**Purpose:** `_records/package.art` records `@art-boards/switchboard-cli` at `cli/switchboard` with its `art-switchboard-cli` bin.
+**Purpose:** `_records/package.art` records `@art-boards/relayboard-cli` at `cli/relayboard` with its `art-relayboard-cli` bin.
 
 **Description:** Create the package record from the package identity, consistent with `package.json`, and keep it unpublished until the first release.
 
@@ -146,15 +146,15 @@ Execute the Changes listed above.
 
 Before starting:
 
-- ::READ `$ART_BOARDS_WHITEBOARD/_records/package.art` — mirror this record's structure for the switchboard package.
+- ::READ `$ART_BOARDS_WHITEBOARD/_records/package.art` — mirror this record's structure for the relayboard package.
 - Mirror `package.json` values exactly: `name`, `files`, `engines`, `keywords`, `packageManager`.
 - Omit the `Deployment:` field — the npm deployment record is created by the First Release phase.
 
 Use these values:
 
 - `Purpose`: Coordinate multi-agent collaboration sessions over arbitrary artefacts.
-- `Description`: CLI package that starts and attaches agent sessions over a switchboard record; contains the command surface, switchboard management, and turn coordination modules.
-- `Canonical Name`: `@art-boards/switchboard-cli` · `Path`: `cli/switchboard` · `Bin`: `art-switchboard-cli`: `./dist/index.mjs`.
+- `Description`: CLI package that starts and attaches agent sessions over a relayboard record; contains the command surface, relayboard management, and turn coordination modules.
+- `Canonical Name`: `@art-boards/relayboard-cli` · `Path`: `cli/relayboard` · `Bin`: `art-relayboard-cli`: `./dist/index.mjs`.
 - `Published`: `false` · `Private`: `false` · `License`: License: Noodlestan 2026 MIT.
 - Runtime dependencies: TBD Art Lib CLI infrastructure packages (commander wrapper, config, logger, operations) — PLANNED with the Art Lib plan.
 - `Scaffolders`: Scaffolder Skeleton: CLI Package, Scaffolder Skeleton: Package Common.
@@ -166,12 +166,12 @@ Validate that:
 
 After executing:
 
-- Commit `record-switchboard-package` with its blueprint message (policy `NOPUSH` — do not push).
+- Commit `record-relayboard-package` with its blueprint message (policy `NOPUSH` — do not push).
 - Report the outcome in chat — inlined instructions report in chat.
 
 **Changes:**
 
-- Create `_records/package.art` declaring Package: Art Switchboard CLI with `canonicalName` `@art-boards/switchboard-cli`, `path` `cli/switchboard`, and `bin` `art-switchboard-cli`.
+- Create `_records/package.art` declaring Package: Art Relayboard CLI with `canonicalName` `@art-boards/relayboard-cli`, `path` `cli/relayboard`, and `bin` `art-relayboard-cli`.
 - Keep the record consistent with the `package.json` identity.
 - Set `published` to `false`; the First Release phase flips it after the first publish.
 
@@ -181,23 +181,23 @@ After executing:
 
 #### Commits:
 
-| ID                           | Repository / Checkout / Branch           | Policy   | Hash      | Status      |
-| ---------------------------- | ---------------------------------------- | -------- | --------- | ----------- |
-| `record-switchboard-package` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | `aa9335c` | `COMMITTED` |
+| ID                          | Repository / Checkout / Branch          | Policy   | Hash      | Status      |
+| --------------------------- | --------------------------------------- | -------- | --------- | ----------- |
+| `record-relayboard-package` | Art Boards / `$ART_RELAYBOARD` / `main` | `NOPUSH` | `aa9335c` | `COMMITTED` |
 
-##### Commit: `record-switchboard-package`
+##### Commit: `record-relayboard-package`
 
 **Repository:** Art Boards
 
 **Message:**
 
-records(switchboard-cli): Record the Art Switchboard CLI package and its bin.
+records(relayboard-cli): Record the Art Relayboard CLI package and its bin.
 
 ## Work
 
 ### Next
 
-- Both iterations are DONE; reflect the outcomes upstream into Milestone: Art Switchboard CLI One.
+- Both iterations are DONE; reflect the outcomes upstream into Milestone: Art Relayboard CLI One.
 
 ### Blockers
 
@@ -209,7 +209,7 @@ records(switchboard-cli): Record the Art Switchboard CLI package and its bin.
 
 ### Not In Scope
 
-- **Command surface** — the `art-switchboard-cli` bin lands in Plan: Create Art Switchboard CLI Bin.
+- **Command surface** — the `art-relayboard-cli` bin lands in Plan: Create Art Relayboard CLI Bin.
 - **npm publish** — releasing lands under the milestone's First Release phase; the `@art-boards` scope is already claimed by `@art-boards/whiteboard-cli@0.0.1`.
 
 ### Evidence
@@ -228,7 +228,7 @@ records(switchboard-cli): Record the Art Switchboard CLI package and its bin.
 
 ### Knowledge to Update
 
-- `$ART_BOARDS/_guide.md` — add `cli/switchboard` to the repository layout when the guide is next updated.
+- `$ART_BOARDS/_guide.md` — add `cli/relayboard` to the repository layout when the guide is next updated.
 
 ### Follow Ups
 

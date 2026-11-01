@@ -1,4 +1,4 @@
-# Knowledge: Art Switchboard CLI
+# Knowledge: Art Relayboard CLI
 
 ## Documents
 
