@@ -34,6 +34,7 @@
 - `dist`
 - `LICENSE-MIT`
 - `README.md`
+- `CHANGELOG.md`
 
 **Language:** TypeScript
 
@@ -56,6 +57,11 @@
 
 - Dev:
   - Package Dependency Set: CLI Development
+
+**Scripts:**
+
+- Package Script Set: CLI Build
+- Package Script Set: Common Scripts
 
 **Scaffolders:**
 

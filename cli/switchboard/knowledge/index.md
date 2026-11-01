@@ -2,8 +2,7 @@
 
 ## Documents
 
-| Document                           | Purpose                                                                        |
-| ---------------------------------- | ------------------------------------------------------------------------------ |
-| [overview.md](overview.md)         | Package purpose, audience, and where to start                                  |
-| [architecture.md](architecture.md) | CLI process, sessions, and the web application — how the package fits together |
-| [boundaries.md](boundaries.md)     | Service boundaries and the message transport direction                         |
+| Document                           | Purpose                                                                       |
+| ---------------------------------- | ----------------------------------------------------------------------------- |
+| [overview.md](overview.md)         | Purpose, use cases, audience, and the service boundaries                      |
+| [architecture.md](architecture.md) | CLI process, sessions, relays, and the web application — how it fits together |

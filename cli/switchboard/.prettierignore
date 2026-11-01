@@ -1,2 +1,4 @@
-dist/
+.coverage/
 coverage/
+env.d.ts
+dist/

@@ -1,7 +1,7 @@
 {
   "name": "@art-boards/switchboard-cli",
   "version": "0.0.1",
-  "description": "Switchboard CLI — multi-agent collaboration sessions over arbitrary artefacts.",
+  "description": "CLI package that starts and attaches agent sessions over a switchboard record; contains the command surface, switchboard management, and turn coordination modules.",
   "keywords": [
     "cli",
     "switchboards",
@@ -10,26 +10,37 @@
     "delegation",
     "agent-visualization"
   ],
-  "author": "Noodlestan",
+  "author": "Noodlestan Collective",
   "license": "MIT",
-  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noodlestan/art-boards.git",
+    "directory": "cli/switchboard"
+  },
   "private": false,
-  "engines": {
-    "node": ">=22"
+  "publishConfig": {
+    "access": "public"
   },
   "files": [
     "dist",
+    "README.md",
     "LICENSE-MIT",
-    "README.md"
+    "CHANGELOG.md"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/noodlestan/art-boards.git"
+  "engines": {
+    "node": ">=22"
   },
+  "type": "module",
+  "sideEffects": false,
   "scripts": {
+    "dev": "esbuild-cli-watch",
+    "lint": "prettier . -c && eslint . && tsc --noEmit",
+    "lint:fix": "prettier . -c --write && eslint . --fix",
     "build": "esbuild-cli",
+    "build:clean": "rm -rf dist",
     "test": "vitest run",
-    "lint": "prettier . -c",
-    "ci": "npm run lint && npm run test && npm run build"
+    "test:unit": "vitest run --dir src --coverage",
+    "test:integration": "vitest run --dir test --passWithNoTests",
+    "ci": "npm run lint && npm run build && npm run test:unit && npm run test:integration"
   }
 }
