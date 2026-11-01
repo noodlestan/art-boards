@@ -1,0 +1,29 @@
+{
+  "name": "@art-boards/switchboard-cli",
+  "version": "0.0.1",
+  "description": "Switchboard CLI — multi-agent collaboration sessions over arbitrary artefacts.",
+  "keywords": [
+    "cli",
+    "switchboards",
+    "art",
+    "agent-workflows",
+    "delegation",
+    "agent-visualization"
+  ],
+  "author": "Noodlestan",
+  "license": "MIT",
+  "type": "module",
+  "private": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "dist",
+    "LICENSE-MIT",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noodlestan/art-boards.git"
+  }
+}
