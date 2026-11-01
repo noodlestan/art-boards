@@ -2,7 +2,7 @@
 
 **ID:** `scaffold-art-switchboard-cli`
 
-**Status:** `WORKING`
+**Status:** `DONE`
 
 **Template:** `$DOMAINS/plans/templates/plan.tart`
 
@@ -57,10 +57,10 @@ Package skeleton only — manifest, build/test/lint configuration, source and te
 
 ## Iterations
 
-| Index | Name                  | Status  |
-| ----- | --------------------- | ------- |
-| 1     | scaffold-package      | `DONE`  |
-| 2     | create-package-record | `READY` |
+| Index | Name                  | Status |
+| ----- | --------------------- | ------ |
+| 1     | scaffold-package      | `DONE` |
+| 2     | create-package-record | `DONE` |
 
 ### Iteration: 1 — scaffold-package
 
@@ -132,7 +132,7 @@ build(switchboard-cli): Connect package scripts to the repository workspace tool
 
 **Id:** `create-package-record`
 
-**Status:** `READY`
+**Status:** `DONE`
 
 **Purpose:** `_records/package.art` records `@art-boards/switchboard-cli` at `cli/switchboard` with its `art-switchboard-cli` bin.
 
@@ -181,9 +181,9 @@ After executing:
 
 #### Commits:
 
-| ID                           | Repository / Checkout / Branch           | Policy   | Hash  | Status     |
-| ---------------------------- | ---------------------------------------- | -------- | ----- | ---------- |
-| `record-switchboard-package` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | (TBD) | `AUTHORED` |
+| ID                           | Repository / Checkout / Branch           | Policy   | Hash      | Status      |
+| ---------------------------- | ---------------------------------------- | -------- | --------- | ----------- |
+| `record-switchboard-package` | Art Boards / `$ART_SWITCHBOARD` / `main` | `NOPUSH` | `aa9335c` | `COMMITTED` |
 
 ##### Commit: `record-switchboard-package`
 
@@ -197,7 +197,7 @@ records(switchboard-cli): Record the Art Switchboard CLI package and its bin.
 
 ### Next
 
-- Delegate the READY iterations.
+- Both iterations are DONE; reflect the outcomes upstream into Milestone: Art Switchboard CLI One.
 
 ### Blockers
 
@@ -216,6 +216,7 @@ records(switchboard-cli): Record the Art Switchboard CLI package and its bin.
 
 - `npm run lint` and `npm run ci` pass from `$ART_BOARDS`; `turbo run ci` builds `dist/index.mjs` and runs 1/1 tests.
 - Commits `b52d3e0`, `c8a9ab3`, `11d68a0`, `ee6a40e` created locally under policy `NOPUSH`; lefthook pre-commit green on all four.
+- `_records/package.art` created and mirrored against `package.json`; `npm run lint` and `npm run ci` green; commit `aa9335c` local under `NOPUSH`.
 
 ### Findings
 
