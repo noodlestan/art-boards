@@ -1,8 +1,8 @@
 # Guide: Art Boards
 
-> Host and manage the Art Boards packages and tools, and their knowledge and planning artefacts.
+> Host and manage the Art Boards project: the Art Whiteboard CLI, the Art Relayboard CLI, and their planning artefacts.
 
-Monorepo containing the Art Boards roadmap and backlogs, knowledge, and CLI source code.e documentation.
+Monorepo containing the Art Boards roadmap, the Art Whiteboard CLI and Art Relayboard CLI packages, and their backlogs and knowledge documentation.
 
 Uses Workflow: Planning Work with one backlog per CLI package, coordinating with Workflow: Roadmapping from one roadmap per CLI package.
 
